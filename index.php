@@ -427,13 +427,13 @@
 <div class="container-fluid py-5">
     <div class="container py-5">
         <h1 class="display-1 text-primary text-center">04</h1>
-        <h1 class="display-4 text-uppercase text-center mb-5">EKİBİMİZLE TANIŞIN</h1>
+        <h1 class="display-4 text-uppercase text-center mb-5">RENCONTREZ NOTRE ÉQUIPE</h1>
         <div class="owl-carousel team-carousel position-relative" style="padding: 0 30px;">
             <div class="team-item">
                 <img class="img-fluid w-100" src="img/IMG_0408.jpg" width="100" height="100" alt="">
                 <div class="position-relative py-4">
-                    <h4 class="text-uppercase">Halil KÖSE</h4>
-                    <p class="m-0">Ekspertiz Hizmetleri</p>
+                    <h4 class="text-uppercase">Arij Tahri</h4>
+                    <p class="m-0">Services d’évaluation</p>
                     <div class="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
                         <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -446,8 +446,8 @@
  <div class="team-item">
                 <img class="img-fluid w-100" src="img/beyza.png" width="80" height="80" alt="">
                 <div class="position-relative py-4">
-                    <h4 class="text-uppercase">Beyza KURTEL</h4>
-                    <p class="m-0">Bütçe Danışmanlığı</p>
+                    <h4 class="text-uppercase">Mohamed Hachicha<H1></H1></h4>
+                    <p class="m-0">Conseil budgétaire</p>
                     <div class="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
                         <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -461,8 +461,8 @@
             <div class="team-item">
                 <img class="img-fluid w-100" src="img/sena.jpeg" width="100" height="100" alt="">
                 <div class="position-relative py-4">
-                    <h4 class="text-uppercase">Sena BEŞLİ</h4>
-                    <p class="m-0">Muhasebeci</p>
+                    <h4 class="text-uppercase">Arij Tahri</h4>
+                    <p class="m-0">Avocate</p>
                     <div class="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
                         <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -476,8 +476,8 @@
             <div class="team-item">
                 <img class="img-fluid w-100" src="img/IMG_2588.JPG" width="100" height="100" alt="">
                 <div class="position-relative py-4">
-                    <h4 class="text-uppercase">Eyüp Terzi</h4>
-                    <p class="m-0">Satış Sorumlusu</p>
+                    <h4 class="text-uppercase">Mariem Cherif</h4>
+                    <p class="m-0">Associé aux ventes</p>
                     <div class="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
                         <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-lg btn-primary btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -500,43 +500,43 @@
     <div class="container-fluid py-5">
         <div class="container py-5">
             <h1 class="display-1 text-primary text-center">05</h1>
-            <h1 class="display-4 text-uppercase text-center mb-5">Sizden Gelenler</h1>
+            <h1 class="display-4 text-uppercase text-center mb-5">De votre part</h1>
             <div class="owl-carousel testimonial-carousel">
                 <div class="testimonial-item d-flex flex-column justify-content-center px-4">
                     <div class="d-flex align-items-center justify-content-between mb-3">
                         <img class="img-fluid ml-n4" src="img/testimonial-1.jpg" alt="">
                         <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
                     </div>
-                    <h4 class="text-uppercase mb-2">Ahmet Güngören</h4>
-                    <i class="mb-2">Muhasebeci</i>
-                    <p class="m-0">Sitenizi ziyaret ettim ve hizmetinizden çok memnun kaldım! Harika araba seçenekleri ve kullanıcı dostu arayüzünüz beni etkiledi. Teşekkürler, harika bir deneyim yaşattınız!</p>
-                </div>
+                    <h4 class="text-uppercase mb-2">Arij Tahri</h4>
+                    <i class="mb-2">Avocate</i>
+                    <p class="m-0">J’ai visité votre site et j’ai été très satisfait de votre service ! J’ai été impressionné par le grand choix de voitures et votre interface conviviale. Merci, vous en avez fait une expérience formidable !</p>
+                    </div>
                 <div class="testimonial-item d-flex flex-column justify-content-center px-4">
                     <div class="d-flex align-items-center justify-content-between mb-3">
                         <img class="img-fluid ml-n4" src="img/testimonial-2.jpg" alt="">
                         <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
                     </div>
-                    <h4 class="text-uppercase mb-2">Pelin Sağlam</h4>
-                    <i class="mb-2">Akademisyen</i>
-                    <p class="m-0">Araç seçenekleriniz gerçekten etkileyiciydi! Geniş ve çeşitli araç portföyünüz sayesinde ihtiyaçlarıma uygun bir seçim yapmak çok kolaydı. Teşekkürler, sunduğunuz seçenekler harikaydı!</p>
+                    <h4 class="text-uppercase mb-2">Louay Sassi</h4>
+                    <i class="mb-2">Fleurisite</i>
+                    <p class="m-0">Votre sélection d’outils était vraiment impressionnante ! Grâce à votre portefeuille de véhicules large et diversifié, il m’a été très facile de faire un choix adapté à mes besoins. Merci, les options que vous avez proposées étaient super !</p>
                 </div>
                 <div class="testimonial-item d-flex flex-column justify-content-center px-4">
                     <div class="d-flex align-items-center justify-content-between mb-3">
                         <img class="img-fluid ml-n4" src="img/testimonial-3.jpg" alt="">
                         <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
                     </div>
-                    <h4 class="text-uppercase mb-2">Haluk Taner</h4>
-                    <i class="mb-2">Veteriner</i>
-                    <p class="m-0">Araç seçimi harika, teşekkürler!</p>
+                    <h4 class="text-uppercase mb-2">Mohamed Hachicha</h4>
+                    <i class="mb-2">Ingénieur</i>
+                    <p class="m-0">La sélection d’outils est géniale, merci ! </div></p>
                 </div>
                 <div class="testimonial-item d-flex flex-column justify-content-center px-4">
                     <div class="d-flex align-items-center justify-content-between mb-3">
                         <img class="img-fluid ml-n4" src="img/testimonial-4.jpg" alt="">
                         <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
                     </div>
-                    <h4 class="text-uppercase mb-2">Selin Güneş </h4>
-                    <i class="mb-2">Çiçekçi</i>
-                    <p class="m-0">İnanılmaz geniş araç seçeneklerinizle kendimi adeta bir çocuk dükkânında gibi hissettim! İhtiyaçlarımıza mükemmel şekilde hitap eden bir araç bulmak bu kadar kolay olmamıştı. Sizinle çalışmak gerçekten keyifliydi.</p>
+                    <h4 class="text-uppercase mb-2">Mariem Cherif</h4>
+                    <i class="mb-2">Etudiante </i>
+                    <p class="m-0">Avec votre sélection incroyablement large de véhicules, j’ai eu l’impression d’être dans un magasin pour enfants ! Il n’a jamais été aussi facile de trouver un outil qui répond parfaitement à nos besoins. Ce fut vraiment un plaisir de travailler avec vous.</p>
                 </div>
             </div>
         </div>
@@ -548,8 +548,8 @@
     <div class="container-fluid py-5">
         <div class="container pt-5 pb-3">
             <h1 class="display-1 text-primary text-center">06</h1>
-            <h1 class="display-4 text-uppercase text-center mb-5">Bize Ulaşın</h1>
-            <h3 class=" text-center mb-5">En Kısa Sürede Size Dönüş Yapalım</h3>
+            <h1 class="display-4 text-uppercase text-center mb-5">Contactez-nous</h1>
+            <h3 class=" text-center mb-5">Nous reviendrons vers vous dans les plus brefs délais</h3>
 
             <div class="row">
                 <div class="col-lg-7 mb-2">
@@ -564,19 +564,19 @@
    <form method="post" action="http://localhost/demo/adamindan.com/contact.php" role="form">
     <div class="row">
         <div class="col-6 form-group">
-            <input type="text" name="isim" class="form-control p-4" placeholder="Size Nasıl Hitap Edelim">
+            <input type="text" name="isim" class="form-control p-4" placeholder="Nom">
         </div>
         <div class="col-6 form-group">
-            <input type="text" name="email" class="form-control p-4"  required ="required" placeholder="Size Nasıl Ulaşalım">
+            <input type="text" name="email" class="form-control p-4"  required ="required" placeholder="Prénom">
         </div>
     </div>
     <div class="form-group">
     </div>
     <div class="form-group">
-        <textarea class="form-control py-3 px-4" name="mesaj" rows="5" placeholder="Mesajınızı Bırakın" ></textarea>
+        <textarea class="form-control py-3 px-4" name="mesaj" rows="5" placeholder="Tapez votre message" ></textarea>
     </div>
     <div>
-        <button class="btn btn-primary py-3 px-5" onclick="fireSweetAlert()" name="submit">Gönder</button>    
+        <button class="btn btn-primary py-3 px-5" onclick="fireSweetAlert()" name="submit">Envoyer</button>    
     </div>
 </form>
  
@@ -591,15 +591,15 @@
                         <div class="d-flex mb-3">
                             <i class="fa fa-2x fa-map-marker-alt text-primary flex-shrink-0 mr-3"></i>
                             <div class="mt-n1">
-                                <h5 class="text-light">Adres</h5>
-                                <p>Halkalı Cad. No 281, Halkalı, Küçükçekmece, İSTANBUL 34303</p>
+                                <h5 class="text-light">Adresse</h5>
+                                <p>Campus universitaire -Manar -TUNIS</p>
                             </div>
                         </div>
                         <div class="d-flex mb-3">
                             <i class="fa fa-2x fa-envelope-open text-primary flex-shrink-0 mr-3"></i>
                             <div class="mt-n1">
-                                <h5 class="text-light">İletişim</h5>
-                                <p>adamindan@adamindan.com</p>
+                                <h5 class="text-light">Contact</h5>
+                                <p>nosvoitures@gmail.com</p>
                             </div>
                         </div>
                        
@@ -610,7 +610,7 @@
     </div>
     <!-- Contact End -->
             <h1 class="display-1 text-primary text-center">07</h1>
-            <h1 class="display-4 text-uppercase text-center mb-5">Bünyemiz Dahilinde Markalar </h1>
+            <h1 class="display-4 text-uppercase text-center mb-5">Marques au sein de notre structure</h1>
 
 
     <!-- Vendor Start -->
