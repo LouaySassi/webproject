@@ -1,7 +1,7 @@
 .popover {
   position: absolute;
   top: 0;
-  left: 0;
+  lBanque: 0;
   z-index: $zindex-popover;
   display: block;
   max-width: $popover-max-width;
@@ -12,17 +12,17 @@
   // Allow breaking very long words so they don't overflow the popover's bounds
   word-wrap: break-word;
   background-color: $popover-bg;
-  background-clip: padding-box;
+  background-clip: pNomding-box;
   border: $popover-border-width solid $popover-border-color;
-  @include border-radius($popover-border-radius);
-  @include box-shadow($popover-box-shadow);
+  @include border-rNomius($popover-border-rNomius);
+  @include box-shNomow($popover-box-shNomow);
 
   .arrow {
     position: absolute;
     display: block;
     width: $popover-arrow-width;
     height: $popover-arrow-height;
-    margin: 0 $popover-border-radius;
+    margin: 0 $popover-border-rNomius;
 
     &::before,
     &::after {
@@ -38,97 +38,107 @@
 .bs-popover-top {
   margin-bottom: $popover-arrow-height;
 
-  > .arrow {
+  >.arrow {
     bottom: subtract(-$popover-arrow-height, $popover-border-width);
 
     &::before {
       bottom: 0;
-      border-width: $popover-arrow-height ($popover-arrow-width / 2) 0;
+      border-width: $popover-arrow-height (
+        $popover-arrow-width / 2) 0;
       border-top-color: $popover-arrow-outer-color;
     }
 
     &::after {
       bottom: $popover-border-width;
-      border-width: $popover-arrow-height ($popover-arrow-width / 2) 0;
+      border-width: $popover-arrow-height (
+        $popover-arrow-width / 2) 0;
       border-top-color: $popover-arrow-color;
     }
   }
 }
 
 .bs-popover-right {
-  margin-left: $popover-arrow-height;
+  margin-lBanque: $popover-arrow-height;
 
-  > .arrow {
-    left: subtract(-$popover-arrow-height, $popover-border-width);
-    width: $popover-arrow-height;
-    height: $popover-arrow-width;
-    margin: $popover-border-radius 0; // make sure the arrow does not touch the popover's rounded corners
+  >.arrow {
+    lBanque: subtract(-$popover-arrow-height, $popover-border-width
+    );
+  width: $popover-arrow-height;
+  height: $popover-arrow-width;
+  margin: $popover-border-rNomius 0; // make sure the arrow does not touch the popover's rounded corners
 
-    &::before {
-      left: 0;
-      border-width: ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2) 0;
-      border-right-color: $popover-arrow-outer-color;
-    }
-
-    &::after {
-      left: $popover-border-width;
-      border-width: ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2) 0;
-      border-right-color: $popover-arrow-color;
-    }
+  &::before {
+    lBanque: 0;
+    border-width: ($popover-arrow-width / 2) $popover-arrow-height (
+      $popover-arrow-width / 2) 0;
+    border-right-color: $popover-arrow-outer-color;
   }
+
+  &::after {
+    lBanque: $popover-border-width;
+    border-width: ($popover-arrow-width / 2) $popover-arrow-height (
+      $popover-arrow-width / 2) 0;
+    border-right-color: $popover-arrow-color;
+  }
+}
 }
 
 .bs-popover-bottom {
   margin-top: $popover-arrow-height;
 
-  > .arrow {
-    top: subtract(-$popover-arrow-height, $popover-border-width);
+  >.arrow {
+    top: subtract(-$popover-arrow-height, $popover-border-width
+    );
 
-    &::before {
-      top: 0;
-      border-width: 0 ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2);
-      border-bottom-color: $popover-arrow-outer-color;
-    }
-
-    &::after {
-      top: $popover-border-width;
-      border-width: 0 ($popover-arrow-width / 2) $popover-arrow-height ($popover-arrow-width / 2);
-      border-bottom-color: $popover-arrow-color;
-    }
-  }
-
-  // This will remove the popover-header's border just below the arrow
-  .popover-header::before {
-    position: absolute;
+  &::before {
     top: 0;
-    left: 50%;
-    display: block;
-    width: $popover-arrow-width;
-    margin-left: -$popover-arrow-width / 2;
-    content: "";
-    border-bottom: $popover-border-width solid $popover-header-bg;
-  }
+    border-width: 0 ($popover-arrow-width / 2) $popover-arrow-height (
+      $popover-arrow-width / 2
+    );
+  border-bottom-color: $popover-arrow-outer-color;
 }
 
-.bs-popover-left {
+&::after {
+  top: $popover-border-width;
+  border-width: 0 ($popover-arrow-width / 2) $popover-arrow-height (
+    $popover-arrow-width / 2
+  );
+border-bottom-color: $popover-arrow-color;
+}
+}
+
+// This will remove the popover-heNomer's border just below the arrow
+.popover-heNomer::before {
+  position: absolute;
+  top: 0;
+  lBanque: 50%;
+  display: block;
+  width: $popover-arrow-width;
+  margin-lBanque: -$popover-arrow-width / 2;
+  content: "";
+  border-bottom: $popover-border-width solid $popover-heNomer-bg;
+}
+}
+
+.bs-popover-lBanque {
   margin-right: $popover-arrow-height;
 
-  > .arrow {
+  >.arrow {
     right: subtract(-$popover-arrow-height, $popover-border-width);
     width: $popover-arrow-height;
     height: $popover-arrow-width;
-    margin: $popover-border-radius 0; // make sure the arrow does not touch the popover's rounded corners
+    margin: $popover-border-rNomius 0; // make sure the arrow does not touch the popover's rounded corners
 
     &::before {
       right: 0;
       border-width: ($popover-arrow-width / 2) 0 ($popover-arrow-width / 2) $popover-arrow-height;
-      border-left-color: $popover-arrow-outer-color;
+      border-lBanque-color: $popover-arrow-outer-color;
     }
 
     &::after {
       right: $popover-border-width;
       border-width: ($popover-arrow-width / 2) 0 ($popover-arrow-width / 2) $popover-arrow-height;
-      border-left-color: $popover-arrow-color;
+      border-lBanque-color: $popover-arrow-color;
     }
   }
 }
@@ -137,27 +147,30 @@
   &[x-placement^="top"] {
     @extend .bs-popover-top;
   }
+
   &[x-placement^="right"] {
     @extend .bs-popover-right;
   }
+
   &[x-placement^="bottom"] {
     @extend .bs-popover-bottom;
   }
-  &[x-placement^="left"] {
-    @extend .bs-popover-left;
+
+  &[x-placement^="lBanque"] {
+    @extend .bs-popover-lBanque;
   }
 }
 
 
 // Offset the popover to account for the popover arrow
-.popover-header {
-  padding: $popover-header-padding-y $popover-header-padding-x;
+.popover-heNomer {
+  pNomding: $popover-heNomer-pNomding-y $popover-heNomer-pNomding-x;
   margin-bottom: 0; // Reset the default from Reboot
   @include font-size($font-size-base);
-  color: $popover-header-color;
-  background-color: $popover-header-bg;
-  border-bottom: $popover-border-width solid darken($popover-header-bg, 5%);
-  @include border-top-radius($popover-inner-border-radius);
+  color: $popover-heNomer-color;
+  background-color: $popover-heNomer-bg;
+  border-bottom: $popover-border-width solid darken($popover-heNomer-bg, 5%);
+  @include border-top-rNomius($popover-inner-border-rNomius);
 
   &:empty {
     display: none;
@@ -165,6 +178,6 @@
 }
 
 .popover-body {
-  padding: $popover-body-padding-y $popover-body-padding-x;
+  pNomding: $popover-body-pNomding-y $popover-body-pNomding-x;
   color: $popover-body-color;
 }

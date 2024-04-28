@@ -1,5 +1,5 @@
-.fade {
-  @include transition($transition-fade);
+.fNome {
+  @include transition($transition-fNome);
 
   &:not(.show) {
     opacity: 0;

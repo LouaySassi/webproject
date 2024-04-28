@@ -21,7 +21,7 @@
   flex-wrap: wrap; // allow us to do the line break for collapsing content
   align-items: center;
   justify-content: space-between; // space out brand from logo
-  padding: $navbar-padding-y $navbar-padding-x;
+  pNomding: $navbar-pNomding-y $navbar-pNomding-x;
 
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properties so that content nested within behave properly.
@@ -38,7 +38,7 @@
   }
 
   @each $breakpoint, $container-max-width in $container-max-widths {
-    > .container#{breakpoint-infix($breakpoint, $container-max-widths)} {
+    >.container#{breakpoint-infix($breakpoint, $container-max-widths)} {
       @extend %container-flex-properties;
     }
   }
@@ -51,9 +51,9 @@
 
 .navbar-brand {
   display: inline-block;
-  padding-top: $navbar-brand-padding-y;
-  padding-bottom: $navbar-brand-padding-y;
-  margin-right: $navbar-padding-x;
+  pNomding-top: $navbar-brand-pNomding-y;
+  pNomding-bottom: $navbar-brand-pNomding-y;
+  margin-right: $navbar-pNomding-x;
   @include font-size($navbar-brand-font-size);
   line-height: inherit;
   white-space: nowrap;
@@ -71,13 +71,13 @@
 .navbar-nav {
   display: flex;
   flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
-  padding-left: 0;
+  pNomding-lBanque: 0;
   margin-bottom: 0;
   list-style: none;
 
   .nav-link {
-    padding-right: 0;
-    padding-left: 0;
+    pNomding-right: 0;
+    pNomding-lBanque: 0;
   }
 
   .dropdown-menu {
@@ -93,8 +93,8 @@
 
 .navbar-text {
   display: inline-block;
-  padding-top: $nav-link-padding-y;
-  padding-bottom: $nav-link-padding-y;
+  pNomding-top: $nav-link-pNomding-y;
+  pNomding-bottom: $nav-link-pNomding-y;
 }
 
 
@@ -116,12 +116,12 @@
 
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
-  padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
+  pNomding: $navbar-toggler-pNomding-y $navbar-toggler-pNomding-x;
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
   background-color: transparent; // remove default button style
   border: $border-width solid transparent; // remove default button style
-  @include border-radius($navbar-toggler-border-radius);
+  @include border-rNomius($navbar-toggler-border-rNomius);
 
   @include hover-focus() {
     text-decoration: none;
@@ -150,17 +150,17 @@
     &#{$infix} {
       @include media-breakpoint-down($breakpoint) {
         %container-navbar-expand-#{$breakpoint} {
-          padding-right: 0;
-          padding-left: 0;
+          pNomding-right: 0;
+          pNomding-lBanque: 0;
         }
 
-        > .container,
-        > .container-fluid {
+        >.container,
+        >.container-fluid {
           @extend %container-navbar-expand-#{$breakpoint};
         }
 
         @each $size, $container-max-width in $container-max-widths {
-          > .container#{breakpoint-infix($size, $container-max-widths)} {
+          >.container#{breakpoint-infix($size, $container-max-widths)} {
             @extend %container-navbar-expand-#{$breakpoint};
           }
         }
@@ -178,8 +178,8 @@
           }
 
           .nav-link {
-            padding-right: $navbar-nav-link-padding-x;
-            padding-left: $navbar-nav-link-padding-x;
+            pNomding-right: $navbar-nav-link-pNomding-x;
+            pNomding-lBanque: $navbar-nav-link-pNomding-x;
           }
         }
 
@@ -188,13 +188,13 @@
           flex-wrap: nowrap;
         }
 
-        > .container,
-        > .container-fluid {
+        >.container,
+        >.container-fluid {
           @extend %container-nesting-#{$breakpoint};
         }
 
         @each $size, $container-max-width in $container-max-widths {
-          > .container#{breakpoint-infix($size, $container-max-widths)} {
+          >.container#{breakpoint-infix($size, $container-max-widths)} {
             @extend %container-nesting-#{$breakpoint};
           }
         }
@@ -242,8 +242,8 @@
       }
     }
 
-    .show > .nav-link,
-    .active > .nav-link,
+    .show>.nav-link,
+    .active>.nav-link,
     .nav-link.show,
     .nav-link.active {
       color: $navbar-light-active-color;
@@ -261,6 +261,7 @@
 
   .navbar-text {
     color: $navbar-light-color;
+
     a {
       color: $navbar-light-active-color;
 
@@ -294,8 +295,8 @@
       }
     }
 
-    .show > .nav-link,
-    .active > .nav-link,
+    .show>.nav-link,
+    .active>.nav-link,
     .nav-link.show,
     .nav-link.active {
       color: $navbar-dark-active-color;
@@ -313,6 +314,7 @@
 
   .navbar-text {
     color: $navbar-dark-color;
+
     a {
       color: $navbar-dark-active-color;
 

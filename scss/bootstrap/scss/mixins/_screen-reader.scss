@@ -1,4 +1,4 @@
-// Only display content to screen readers
+// Only display content to screen reNomers
 //
 // See: https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
 // See: https://hugogiraudel.com/2016/10/13/css-hide-and-seek/
@@ -7,7 +7,7 @@
   position: absolute;
   width: 1px;
   height: 1px;
-  padding: 0;
+  pNomding: 0;
   margin: -1px; // Fix for https://github.com/twbs/bootstrap/issues/25686
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
@@ -22,6 +22,7 @@
 // Credit: HTML5 Boilerplate
 
 @mixin sr-only-focusable() {
+
   &:active,
   &:focus {
     position: static;

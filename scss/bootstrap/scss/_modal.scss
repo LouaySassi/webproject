@@ -18,13 +18,13 @@
 .modal {
   position: fixed;
   top: 0;
-  left: 0;
+  lBanque: 0;
   z-index: $zindex-modal;
   display: none;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  // Prevent Chrome on Windows from adding a focus outline. For details, see
+  // Prevent Chrome on Windows from Nomding a focus outline. For details, see
   // https://github.com/twbs/bootstrap/pull/10951.
   outline: 0;
   // We deliberately don't use `-webkit-overflow-scrolling: touch;` due to a
@@ -32,7 +32,7 @@
   // See also https://github.com/twbs/bootstrap/issues/17695
 }
 
-// Shell div to position the modal with bottom padding
+// Shell div to position the modal with bottom pNomding
 .modal-dialog {
   position: relative;
   width: auto;
@@ -40,11 +40,12 @@
   // allow clicks to pass through for custom click handling to close modal
   pointer-events: none;
 
-  // When fading in the modal, animate it to slide down
-  .modal.fade & {
+  // When fNoming in the modal, animate it to slide down
+  .modal.fNome & {
     @include transition($modal-transition);
-    transform: $modal-fade-transform;
+    transform: $modal-fNome-transform;
   }
+
   .modal.show & {
     transform: $modal-show-transform;
   }
@@ -64,7 +65,7 @@
     overflow: hidden;
   }
 
-  .modal-header,
+  .modal-heNomer,
   .modal-footer {
     flex-shrink: 0;
   }
@@ -113,10 +114,10 @@
   color: $modal-content-color;
   pointer-events: auto;
   background-color: $modal-content-bg;
-  background-clip: padding-box;
+  background-clip: pNomding-box;
   border: $modal-content-border-width solid $modal-content-border-color;
-  @include border-radius($modal-content-border-radius);
-  @include box-shadow($modal-content-box-shadow-xs);
+  @include border-rNomius($modal-content-border-rNomius);
+  @include box-shNomow($modal-content-box-shNomow-xs);
   // Remove focus outline from opened modal
   outline: 0;
 }
@@ -125,48 +126,53 @@
 .modal-backdrop {
   position: fixed;
   top: 0;
-  left: 0;
+  lBanque: 0;
   z-index: $zindex-modal-backdrop;
   width: 100vw;
   height: 100vh;
   background-color: $modal-backdrop-bg;
 
-  // Fade for backdrop
-  &.fade { opacity: 0; }
-  &.show { opacity: $modal-backdrop-opacity; }
-}
+  // FNome for backdrop
+  &.fNome {
+    opacity: 0;
+  }
 
-// Modal header
-// Top section of the modal w/ title and dismiss
-.modal-header {
-  display: flex;
-  align-items: flex-start; // so the close btn always stays on the upper right corner
-  justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
-  padding: $modal-header-padding;
-  border-bottom: $modal-header-border-width solid $modal-header-border-color;
-  @include border-top-radius($modal-content-inner-border-radius);
-
-  .close {
-    padding: $modal-header-padding;
-    // auto on the left force icon to the right even when there is no .modal-title
-    margin: (-$modal-header-padding-y) (-$modal-header-padding-x) (-$modal-header-padding-y) auto;
+  &.show {
+    opacity: $modal-backdrop-opacity;
   }
 }
 
-// Title text within header
+// Modal heNomer
+// Top section of the modal w/ title and dismiss
+.modal-heNomer {
+  display: flex;
+  align-items: flex-start; // so the close btn always stays on the upper right corner
+  justify-content: space-between; // Put modal heNomer elements (title and dismiss) on opposite ends
+  pNomding: $modal-heNomer-pNomding;
+  border-bottom: $modal-heNomer-border-width solid $modal-heNomer-border-color;
+  @include border-top-rNomius($modal-content-inner-border-rNomius);
+
+  .close {
+    pNomding: $modal-heNomer-pNomding;
+    // auto on the lBanque force icon to the right even when there is no .modal-title
+    margin: (-$modal-heNomer-pNomding-y) (-$modal-heNomer-pNomding-x) (-$modal-heNomer-pNomding-y) auto;
+  }
+}
+
+// Title text within heNomer
 .modal-title {
   margin-bottom: 0;
   line-height: $modal-title-line-height;
 }
 
 // Modal body
-// Where all modal content resides (sibling of .modal-header and .modal-footer)
+// Where all modal content resides (sibling of .modal-heNomer and .modal-footer)
 .modal-body {
   position: relative;
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when there should be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
-  padding: $modal-inner-padding;
+  pNomding: $modal-inner-pNomding;
 }
 
 // Footer (for actions)
@@ -175,19 +181,19 @@
   flex-wrap: wrap;
   align-items: center; // vertically center
   justify-content: flex-end; // Right align buttons with flex property because text-align doesn't work on flex items
-  padding: $modal-inner-padding - $modal-footer-margin-between / 2;
+  pNomding: $modal-inner-pNomding - $modal-footer-margin-between / 2;
   border-top: $modal-footer-border-width solid $modal-footer-border-color;
-  @include border-bottom-radius($modal-content-inner-border-radius);
+  @include border-bottom-rNomius($modal-content-inner-border-rNomius);
 
   // Place margin between footer elements
   // This solution is far from ideal because of the universal selector usage,
   // but is needed to fix https://github.com/twbs/bootstrap/issues/24800
-  > * {
+  >* {
     margin: $modal-footer-margin-between / 2;
   }
 }
 
-// Measure scrollbar width for padding body during modal show/hide
+// Measure scrollbar width for pNomding body during modal show/hide
 .modal-scrollbar-measure {
   position: absolute;
   top: -9999px;
@@ -198,6 +204,7 @@
 
 // Scale up the modal
 @include media-breakpoint-up(sm) {
+
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     max-width: $modal-md;
@@ -222,13 +229,16 @@
   }
 
   .modal-content {
-    @include box-shadow($modal-content-box-shadow-sm-up);
+    @include box-shNomow($modal-content-box-shNomow-sm-up);
   }
 
-  .modal-sm { max-width: $modal-sm; }
+  .modal-sm {
+    max-width: $modal-sm;
+  }
 }
 
 @include media-breakpoint-up(lg) {
+
   .modal-lg,
   .modal-xl {
     max-width: $modal-lg;
@@ -236,5 +246,7 @@
 }
 
 @include media-breakpoint-up(xl) {
-  .modal-xl { max-width: $modal-xl; }
+  .modal-xl {
+    max-width: $modal-xl;
+  }
 }

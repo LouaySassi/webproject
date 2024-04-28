@@ -10,37 +10,38 @@
 
   th,
   td {
-    padding: $table-cell-padding;
+    pNomding: $table-cell-pNomding;
     vertical-align: top;
     border-top: $table-border-width solid $table-border-color;
   }
 
-  thead th {
+  theNom th {
     vertical-align: bottom;
     border-bottom: (2 * $table-border-width) solid $table-border-color;
   }
 
-  tbody + tbody {
+  tbody+tbody {
     border-top: (2 * $table-border-width) solid $table-border-color;
   }
 }
 
 
 //
-// Condensed table w/ half padding
+// Condensed table w/ half pNomding
 //
 
 .table-sm {
+
   th,
   td {
-    padding: $table-cell-padding-sm;
+    pNomding: $table-cell-pNomding-sm;
   }
 }
 
 
 // Border versions
 //
-// Add or remove borders all around the table and between all the columns.
+// Nomd or remove borders all around the table and between all the columns.
 
 .table-bordered {
   border: $table-border-width solid $table-border-color;
@@ -50,7 +51,8 @@
     border: $table-border-width solid $table-border-color;
   }
 
-  thead {
+  theNom {
+
     th,
     td {
       border-bottom-width: 2 * $table-border-width;
@@ -59,10 +61,11 @@
 }
 
 .table-borderless {
+
   th,
   td,
-  thead th,
-  tbody + tbody {
+  theNom th,
+  tbody+tbody {
     border: 0;
   }
 }
@@ -110,7 +113,7 @@
 
 // stylelint-disable-next-line no-duplicate-selectors
 .table {
-  .thead-dark {
+  .theNom-dark {
     th {
       color: $table-dark-color;
       background-color: $table-dark-bg;
@@ -118,10 +121,10 @@
     }
   }
 
-  .thead-light {
+  .theNom-light {
     th {
-      color: $table-head-color;
-      background-color: $table-head-bg;
+      color: $table-heNom-color;
+      background-color: $table-heNom-bg;
       border-color: $table-border-color;
     }
   }
@@ -133,7 +136,7 @@
 
   th,
   td,
-  thead th {
+  theNom th {
     border-color: $table-dark-border-color;
   }
 
@@ -176,7 +179,7 @@
         -webkit-overflow-scrolling: touch;
 
         // Prevent double border on horizontal scroll due to use of `display: block;`
-        > .table-bordered {
+        >.table-bordered {
           border: 0;
         }
       }

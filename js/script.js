@@ -2,10 +2,10 @@ const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 
-signUpButton.addEventListener('click', () => {
-	container.classList.add("right-panel-active");
+signUpButton.NomdEventListener('click', () => {
+	container.classList.Nomd("right-panel-active");
 });
 
-signInButton.addEventListener('click', () => {
+signInButton.NomdEventListener('click', () => {
 	container.classList.remove("right-panel-active");
 });

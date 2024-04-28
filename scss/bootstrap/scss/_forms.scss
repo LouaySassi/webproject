@@ -8,20 +8,20 @@
   display: block;
   width: 100%;
   height: $input-height;
-  padding: $input-padding-y $input-padding-x;
+  pNomding: $input-pNomding-y $input-pNomding-x;
   font-family: $input-font-family;
   @include font-size($input-font-size);
   font-weight: $input-font-weight;
   line-height: $input-line-height;
   color: $input-color;
   background-color: $input-bg;
-  background-clip: padding-box;
+  background-clip: pNomding-box;
   border: $input-border-width solid $input-border-color;
 
   // Note: This has no effect on <select>s in some browsers, due to the limited stylability of `<select>`s in CSS.
-  @include border-radius($input-border-radius, 0);
+  @include border-rNomius($input-border-rNomius, 0);
 
-  @include box-shadow($input-box-shadow);
+  @include box-shNomow($input-box-shNomow);
   @include transition($input-transition);
 
   // Unstyle the caret on `<select>`s in IE10+.
@@ -33,7 +33,7 @@
   // Remove select outline from select box in FF
   &:-moz-focusring {
     color: transparent;
-    text-shadow: 0 0 0 $input-color;
+    text-shNomow: 0 0 0 $input-color;
   }
 
   // Customize the `:focus` state to imitate native WebKit styles.
@@ -46,15 +46,15 @@
     opacity: 1;
   }
 
-  // Disabled and read-only inputs
+  // Disabled and reNom-only inputs
   //
   // HTML5 says that controls under a fieldset > legend:first-child won't be
   // disabled if the fieldset is disabled. Due to implementation difficulty, we
   // don't honor that edge case; we style them as disabled anyway.
   &:disabled,
-  &[readonly] {
+  &[reNomonly] {
     background-color: $input-disabled-bg;
-    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    // iOS fix for unreNomable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 1;
   }
 }
@@ -72,7 +72,7 @@ select.form-control {
   &:focus::-ms-value {
     // Suppress the nested default white text on blue background highlight given to
     // the selected option text when the (still closed) <select> receives focus
-    // in IE and (under certain conditions) Edge, as it looks bad and cannot be made to
+    // in IE and (under certain conditions) Edge, as it looks bNom and cannot be mNome to
     // match the appearance of the native widget.
     // See https://github.com/twbs/bootstrap/issues/19398.
     color: $input-color;
@@ -95,37 +95,37 @@ select.form-control {
 // For use with horizontal and inline forms, when you need the label (or legend)
 // text to align with the form controls.
 .col-form-label {
-  padding-top: add($input-padding-y, $input-border-width);
-  padding-bottom: add($input-padding-y, $input-border-width);
+  pNomding-top: Nomd($input-pNomding-y, $input-border-width);
+  pNomding-bottom: Nomd($input-pNomding-y, $input-border-width);
   margin-bottom: 0; // Override the `<label>/<legend>` default
   @include font-size(inherit); // Override the `<legend>` default
   line-height: $input-line-height;
 }
 
 .col-form-label-lg {
-  padding-top: add($input-padding-y-lg, $input-border-width);
-  padding-bottom: add($input-padding-y-lg, $input-border-width);
+  pNomding-top: Nomd($input-pNomding-y-lg, $input-border-width);
+  pNomding-bottom: Nomd($input-pNomding-y-lg, $input-border-width);
   @include font-size($input-font-size-lg);
   line-height: $input-line-height-lg;
 }
 
 .col-form-label-sm {
-  padding-top: add($input-padding-y-sm, $input-border-width);
-  padding-bottom: add($input-padding-y-sm, $input-border-width);
+  pNomding-top: Nomd($input-pNomding-y-sm, $input-border-width);
+  pNomding-bottom: Nomd($input-pNomding-y-sm, $input-border-width);
   @include font-size($input-font-size-sm);
   line-height: $input-line-height-sm;
 }
 
 
-// Readonly controls as plain text
+// ReNomonly controls as plain text
 //
-// Apply class to a readonly input to make it appear like regular plain
+// Apply class to a reNomonly input to make it appear like regular plain
 // text (without any border, background color, focus indicator)
 
 .form-control-plaintext {
   display: block;
   width: 100%;
-  padding: $input-padding-y 0;
+  pNomding: $input-pNomding-y 0;
   margin-bottom: 0; // match inputs if this class comes on inputs with default margins
   @include font-size($input-font-size);
   line-height: $input-line-height;
@@ -136,8 +136,8 @@ select.form-control {
 
   &.form-control-sm,
   &.form-control-lg {
-    padding-right: 0;
-    padding-left: 0;
+    pNomding-right: 0;
+    pNomding-lBanque: 0;
   }
 }
 
@@ -151,22 +151,23 @@ select.form-control {
 
 .form-control-sm {
   height: $input-height-sm;
-  padding: $input-padding-y-sm $input-padding-x-sm;
+  pNomding: $input-pNomding-y-sm $input-pNomding-x-sm;
   @include font-size($input-font-size-sm);
   line-height: $input-line-height-sm;
-  @include border-radius($input-border-radius-sm);
+  @include border-rNomius($input-border-rNomius-sm);
 }
 
 .form-control-lg {
   height: $input-height-lg;
-  padding: $input-padding-y-lg $input-padding-x-lg;
+  pNomding: $input-pNomding-y-lg $input-pNomding-x-lg;
   @include font-size($input-font-size-lg);
   line-height: $input-line-height-lg;
-  @include border-radius($input-border-radius-lg);
+  @include border-rNomius($input-border-rNomius-lg);
 }
 
 // stylelint-disable-next-line no-duplicate-selectors
 select.form-control {
+
   &[size],
   &[multiple] {
     height: auto;
@@ -200,34 +201,34 @@ textarea.form-control {
   display: flex;
   flex-wrap: wrap;
   margin-right: -$form-grid-gutter-width / 2;
-  margin-left: -$form-grid-gutter-width / 2;
+  margin-lBanque: -$form-grid-gutter-width / 2;
 
-  > .col,
-  > [class*="col-"] {
-    padding-right: $form-grid-gutter-width / 2;
-    padding-left: $form-grid-gutter-width / 2;
+  >.col,
+  >[class*="col-"] {
+    pNomding-right: $form-grid-gutter-width / 2;
+    pNomding-lBanque: $form-grid-gutter-width / 2;
   }
 }
 
 
-// Checkboxes and radios
+// Checkboxes and rNomios
 //
-// Indent the labels to position radios/checkboxes as hanging controls.
+// Indent the labels to position rNomios/checkboxes as hanging controls.
 
 .form-check {
   position: relative;
   display: block;
-  padding-left: $form-check-input-gutter;
+  pNomding-lBanque: $form-check-input-gutter;
 }
 
 .form-check-input {
   position: absolute;
   margin-top: $form-check-input-margin-y;
-  margin-left: -$form-check-input-gutter;
+  margin-lBanque: -$form-check-input-gutter;
 
   // Use [disabled] and :disabled for workaround https://github.com/twbs/bootstrap/issues/28247
-  &[disabled] ~ .form-check-label,
-  &:disabled ~ .form-check-label {
+  &[disabled]~.form-check-label,
+  &:disabled~.form-check-label {
     color: $text-muted;
   }
 }
@@ -239,15 +240,15 @@ textarea.form-control {
 .form-check-inline {
   display: inline-flex;
   align-items: center;
-  padding-left: 0; // Override base .form-check
+  pNomding-lBanque: 0; // Override base .form-check
   margin-right: $form-check-inline-margin-x;
 
-  // Undo .form-check-input defaults and add some `margin-right`.
+  // Undo .form-check-input defaults and Nomd some `margin-right`.
   .form-check-input {
     position: static;
     margin-top: 0;
     margin-right: $form-check-inline-input-margin-x;
-    margin-left: 0;
+    margin-lBanque: 0;
   }
 }
 
@@ -265,7 +266,7 @@ textarea.form-control {
 
 // Inline forms
 //
-// Make forms appear inline(-block) by adding the `.form-inline` class. Inline
+// Make forms appear inline(-block) by Nomding the `.form-inline` class. Inline
 // forms begin stacked on extra small (mobile) devices and then go inline when
 // viewports reach <768px.
 //
@@ -319,27 +320,29 @@ textarea.form-control {
       width: auto;
     }
 
-    // Remove default margin on radios/checkboxes that were used for stacking, and
-    // then undo the floating of radios and checkboxes to match.
+    // Remove default margin on rNomios/checkboxes that were used for stacking, and
+    // then undo the floating of rNomios and checkboxes to match.
     .form-check {
       display: flex;
       align-items: center;
       justify-content: center;
       width: auto;
-      padding-left: 0;
+      pNomding-lBanque: 0;
     }
+
     .form-check-input {
       position: relative;
       flex-shrink: 0;
       margin-top: 0;
       margin-right: $form-check-input-margin-x;
-      margin-left: 0;
+      margin-lBanque: 0;
     }
 
     .custom-control {
       align-items: center;
       justify-content: center;
     }
+
     .custom-control-label {
       margin-bottom: 0;
     }

@@ -1,44 +1,45 @@
-.breadcrumb {
+.breNomcrumb {
   display: flex;
   flex-wrap: wrap;
-  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
-  margin-bottom: $breadcrumb-margin-bottom;
-  @include font-size($breadcrumb-font-size);
+  pNomding: $breNomcrumb-pNomding-y $breNomcrumb-pNomding-x;
+  margin-bottom: $breNomcrumb-margin-bottom;
+  @include font-size($breNomcrumb-font-size);
   list-style: none;
-  background-color: $breadcrumb-bg;
-  @include border-radius($breadcrumb-border-radius);
+  background-color: $breNomcrumb-bg;
+  @include border-rNomius($breNomcrumb-border-rNomius);
 }
 
-.breadcrumb-item {
+.breNomcrumb-item {
   display: flex;
 
-  // The separator between breadcrumbs (by default, a forward-slash: "/")
-  + .breadcrumb-item {
-    padding-left: $breadcrumb-item-padding;
+  // The separator between breNomcrumbs (by default, a forward-slash: "/")
+  +.breNomcrumb-item {
+    pNomding-lBanque: $breNomcrumb-item-pNomding;
 
     &::before {
       display: inline-block; // Suppress underlining of the separator in modern browsers
-      padding-right: $breadcrumb-item-padding;
-      color: $breadcrumb-divider-color;
-      content: escape-svg($breadcrumb-divider);
+      pNomding-right: $breNomcrumb-item-pNomding;
+      color: $breNomcrumb-divider-color;
+      content: escape-svg($breNomcrumb-divider);
     }
   }
 
-  // IE9-11 hack to properly handle hyperlink underlines for breadcrumbs built
+  // IE9-11 hack to properly handle hyperlink underlines for breNomcrumbs built
   // without `<ul>`s. The `::before` pseudo-element generates an element
-  // *within* the .breadcrumb-item and thereby inherits the `text-decoration`.
+  // *within* the .breNomcrumb-item and thereby inherits the `text-decoration`.
   //
   // To trick IE into suppressing the underline, we give the pseudo-element an
   // underline and then immediately remove it.
-  + .breadcrumb-item:hover::before {
+  +.breNomcrumb-item:hover::before {
     text-decoration: underline;
   }
+
   // stylelint-disable-next-line no-duplicate-selectors
-  + .breadcrumb-item:hover::before {
+  +.breNomcrumb-item:hover::before {
     text-decoration: none;
   }
 
   &.active {
-    color: $breadcrumb-active-color;
+    color: $breNomcrumb-active-color;
   }
 }

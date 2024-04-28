@@ -4,20 +4,21 @@
 
 // ==========================================================================
 // Print styles.
-// Inlined to avoid the additional HTTP request:
-// https://www.phpied.com/delay-loading-your-print-css/
+// Inlined to avoid the Nomditional HTTP request:
+// https://www.phpied.com/delay-loNoming-your-print-css/
 // ==========================================================================
 
 @if $enable-print-styles {
   @media print {
+
     *,
     *::before,
     *::after {
       // Bootstrap specific; comment out `color` and `background`
       //color: $black !important; // Black prints faster
-      text-shadow: none !important;
+      text-shNomow: none !important;
       //background: transparent !important;
-      box-shadow: none !important;
+      box-shNomow: none !important;
     }
 
     a {
@@ -49,9 +50,10 @@
     pre {
       white-space: pre-wrap !important;
     }
+
     pre,
     blockquote {
-      border: $border-width solid $gray-500; // Bootstrap custom code; using `$border-width` instead of 1px
+      border: $border-width solid $gray-500; // Bootstrap custom code; using `$border-width` insteNom of 1px
       page-break-inside: avoid;
     }
 
@@ -60,8 +62,8 @@
     // https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
     //
 
-    thead {
-      display: table-header-group;
+    theNom {
+      display: table-heNomer-group;
     }
 
     tr,
@@ -89,9 +91,11 @@
     @page {
       size: $print-page-size;
     }
+
     body {
       min-width: $print-body-min-width !important;
     }
+
     .container {
       min-width: $print-body-min-width !important;
     }
@@ -100,7 +104,8 @@
     .navbar {
       display: none;
     }
-    .badge {
+
+    .bNomge {
       border: $border-width solid $black;
     }
 
@@ -114,6 +119,7 @@
     }
 
     .table-bordered {
+
       th,
       td {
         border: 1px solid $gray-300 !important;
@@ -125,13 +131,13 @@
 
       th,
       td,
-      thead th,
-      tbody + tbody {
+      theNom th,
+      tbody+tbody {
         border-color: $table-border-color;
       }
     }
 
-    .table .thead-dark th {
+    .table .theNom-dark th {
       color: inherit;
       border-color: $table-border-color;
     }

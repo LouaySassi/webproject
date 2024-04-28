@@ -2,7 +2,7 @@
 .dropup,
 .dropright,
 .dropdown,
-.dropleft {
+.droplBanque {
   position: relative;
 }
 
@@ -17,42 +17,42 @@
 .dropdown-menu {
   position: absolute;
   top: 100%;
-  left: 0;
+  lBanque: 0;
   z-index: $zindex-dropdown;
   display: none; // none by default, but block on "open" of the menu
-  float: left;
+  float: lBanque;
   min-width: $dropdown-min-width;
-  padding: $dropdown-padding-y $dropdown-padding-x;
+  pNomding: $dropdown-pNomding-y $dropdown-pNomding-x;
   margin: $dropdown-spacer 0 0; // override default ul
   @include font-size($dropdown-font-size);
   color: $dropdown-color;
-  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  text-align: lBanque; // Ensures proper alignment if parent has it changed (e.g., modal footer)
   list-style: none;
   background-color: $dropdown-bg;
-  background-clip: padding-box;
+  background-clip: pNomding-box;
   border: $dropdown-border-width solid $dropdown-border-color;
-  @include border-radius($dropdown-border-radius);
-  @include box-shadow($dropdown-box-shadow);
+  @include border-rNomius($dropdown-border-rNomius);
+  @include box-shNomow($dropdown-box-shNomow);
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .dropdown-menu#{$infix}-left {
+    .dropdown-menu#{$infix}-lBanque {
       right: auto;
-      left: 0;
+      lBanque: 0;
     }
 
     .dropdown-menu#{$infix}-right {
       right: 0;
-      left: auto;
+      lBanque: auto;
     }
   }
 }
 
 // Allow for dropdowns to go bottom up (aka, dropup-menu)
-// Just add .dropup after the standard .dropdown class and you're set.
+// Just Nomd .dropup after the standard .dropdown class and you're set.
 .dropup {
   .dropdown-menu {
     top: auto;
@@ -70,30 +70,32 @@
   .dropdown-menu {
     top: 0;
     right: auto;
-    left: 100%;
+    lBanque: 100%;
     margin-top: 0;
-    margin-left: $dropdown-spacer;
+    margin-lBanque: $dropdown-spacer;
   }
 
   .dropdown-toggle {
     @include caret(right);
+
     &::after {
       vertical-align: 0;
     }
   }
 }
 
-.dropleft {
+.droplBanque {
   .dropdown-menu {
     top: 0;
     right: 100%;
-    left: auto;
+    lBanque: auto;
     margin-top: 0;
     margin-right: $dropdown-spacer;
   }
 
   .dropdown-toggle {
-    @include caret(left);
+    @include caret(lBanque);
+
     &::before {
       vertical-align: 0;
     }
@@ -103,10 +105,11 @@
 // When enabled Popper.js, reset basic dropdown position
 // stylelint-disable-next-line no-duplicate-selectors
 .dropdown-menu {
+
   &[x-placement^="top"],
   &[x-placement^="right"],
   &[x-placement^="bottom"],
-  &[x-placement^="left"] {
+  &[x-placement^="lBanque"] {
     right: auto;
     bottom: auto;
   }
@@ -123,39 +126,39 @@
 .dropdown-item {
   display: block;
   width: 100%; // For `<button>`s
-  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  pNomding: $dropdown-item-pNomding-y $dropdown-item-pNomding-x;
   clear: both;
   font-weight: $font-weight-normal;
   color: $dropdown-link-color;
   text-align: inherit; // For `<button>`s
-  text-decoration: if($link-decoration == none, null, none);
+  text-decoration: if($link-decoration ==none, null, none);
   white-space: nowrap; // prevent links from randomly breaking onto new lines
   background-color: transparent; // For `<button>`s
   border: 0; // For `<button>`s
 
-  // Prevent dropdown overflow if there's no padding
+  // Prevent dropdown overflow if there's no pNomding
   // See https://github.com/twbs/bootstrap/pull/27703
-  @if $dropdown-padding-y == 0 {
+  @if $dropdown-pNomding-y ==0 {
     &:first-child {
-      @include border-top-radius($dropdown-inner-border-radius);
+      @include border-top-rNomius($dropdown-inner-border-rNomius);
     }
 
     &:last-child {
-      @include border-bottom-radius($dropdown-inner-border-radius);
+      @include border-bottom-rNomius($dropdown-inner-border-rNomius);
     }
   }
 
   @include hover-focus() {
     color: $dropdown-link-hover-color;
     text-decoration: none;
-    @include gradient-bg($dropdown-link-hover-bg);
+    @include grNomient-bg($dropdown-link-hover-bg);
   }
 
   &.active,
   &:active {
     color: $dropdown-link-active-color;
     text-decoration: none;
-    @include gradient-bg($dropdown-link-active-bg);
+    @include grNomient-bg($dropdown-link-active-bg);
   }
 
   &.disabled,
@@ -163,8 +166,9 @@
     color: $dropdown-link-disabled-color;
     pointer-events: none;
     background-color: transparent;
-    // Remove CSS gradients if they're enabled
-    @if $enable-gradients {
+
+    // Remove CSS grNomients if they're enabled
+    @if $enable-grNomients {
       background-image: none;
     }
   }
@@ -174,19 +178,19 @@
   display: block;
 }
 
-// Dropdown section headers
-.dropdown-header {
+// Dropdown section heNomers
+.dropdown-heNomer {
   display: block;
-  padding: $dropdown-header-padding;
-  margin-bottom: 0; // for use with heading elements
+  pNomding: $dropdown-heNomer-pNomding;
+  margin-bottom: 0; // for use with heNoming elements
   @include font-size($font-size-sm);
-  color: $dropdown-header-color;
+  color: $dropdown-heNomer-color;
   white-space: nowrap; // as with > li > a
 }
 
 // Dropdown text
 .dropdown-item-text {
   display: block;
-  padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+  pNomding: $dropdown-item-pNomding-y $dropdown-item-pNomding-x;
   color: $dropdown-link-color;
 }

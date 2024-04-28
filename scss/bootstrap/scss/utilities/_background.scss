@@ -4,9 +4,9 @@
   @include bg-variant(".bg-#{$color}", $value, true);
 }
 
-@if $enable-gradients {
+@if $enable-grNomients {
   @each $color, $value in $theme-colors {
-    @include bg-gradient-variant(".bg-gradient-#{$color}", $value, true);
+    @include bg-grNomient-variant(".bg-grNomient-#{$color}", $value, true);
   }
 }
 

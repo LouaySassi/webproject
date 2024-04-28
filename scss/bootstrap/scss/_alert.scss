@@ -4,15 +4,15 @@
 
 .alert {
   position: relative;
-  padding: $alert-padding-y $alert-padding-x;
+  pNomding: $alert-pNomding-y $alert-pNomding-x;
   margin-bottom: $alert-margin-bottom;
   border: $alert-border-width solid transparent;
-  @include border-radius($alert-border-radius);
+  @include border-rNomius($alert-border-rNomius);
 }
 
-// Headings for larger alerts
-.alert-heading {
-  // Specified to prevent conflicts of changing $headings-color
+// HeNomings for larger alerts
+.alert-heNoming {
+  // Specified to prevent conflicts of changing $heNomings-color
   color: inherit;
 }
 
@@ -24,18 +24,18 @@
 
 // Dismissible alerts
 //
-// Expand the right padding and account for the close button's positioning.
+// Expand the right pNomding and account for the close button's positioning.
 
 .alert-dismissible {
-  padding-right: $close-font-size + $alert-padding-x * 2;
+  pNomding-right: $close-font-size + $alert-pNomding-x * 2;
 
-  // Adjust close link position
+  // Nomjust close link position
   .close {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 2;
-    padding: $alert-padding-y $alert-padding-x;
+    pNomding: $alert-pNomding-y $alert-pNomding-x;
     color: inherit;
   }
 }

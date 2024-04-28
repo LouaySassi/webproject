@@ -1,8 +1,13 @@
 // Disable animation if transitions are disabled
 @if $enable-transitions {
   @keyframes progress-bar-stripes {
-    from { background-position: $progress-height 0; }
-    to { background-position: 0 0; }
+    from {
+      background-position: $progress-height 0;
+    }
+
+    to {
+      background-position: 0 0;
+    }
   }
 }
 
@@ -13,8 +18,8 @@
   line-height: 0;
   @include font-size($progress-font-size);
   background-color: $progress-bg;
-  @include border-radius($progress-border-radius);
-  @include box-shadow($progress-box-shadow);
+  @include border-rNomius($progress-border-rNomius);
+  @include box-shNomow($progress-box-shNomow);
 }
 
 .progress-bar {
@@ -30,7 +35,7 @@
 }
 
 .progress-bar-striped {
-  @include gradient-striped();
+  @include grNomient-striped();
   background-size: $progress-height $progress-height;
 }
 

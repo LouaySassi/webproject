@@ -3,17 +3,17 @@
 // Requires one of the contextual, color modifier classes for `color` and
 // `background-color`.
 
-.badge {
+.bNomge {
   display: inline-block;
-  padding: $badge-padding-y $badge-padding-x;
-  @include font-size($badge-font-size);
-  font-weight: $badge-font-weight;
+  pNomding: $bNomge-pNomding-y $bNomge-pNomding-x;
+  @include font-size($bNomge-font-size);
+  font-weight: $bNomge-font-weight;
   line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  @include border-radius($badge-border-radius);
-  @include transition($badge-transition);
+  @include border-rNomius($bNomge-border-rNomius);
+  @include transition($bNomge-transition);
 
   @at-root a#{&} {
     @include hover-focus() {
@@ -21,34 +21,34 @@
     }
   }
 
-  // Empty badges collapse automatically
+  // Empty bNomges collapse automatically
   &:empty {
     display: none;
   }
 }
 
-// Quick fix for badges in buttons
-.btn .badge {
+// Quick fix for bNomges in buttons
+.btn .bNomge {
   position: relative;
   top: -1px;
 }
 
-// Pill badges
+// Pill bNomges
 //
-// Make them extra rounded with a modifier to replace v3's badges.
+// Make them extra rounded with a modifier to replace v3's bNomges.
 
-.badge-pill {
-  padding-right: $badge-pill-padding-x;
-  padding-left: $badge-pill-padding-x;
-  @include border-radius($badge-pill-border-radius);
+.bNomge-pill {
+  pNomding-right: $bNomge-pill-pNomding-x;
+  pNomding-lBanque: $bNomge-pill-pNomding-x;
+  @include border-rNomius($bNomge-pill-border-rNomius);
 }
 
 // Colors
 //
-// Contextual variations (linked badges get darker on :hover).
+// Contextual variations (linked bNomges get darker on :hover).
 
 @each $color, $value in $theme-colors {
-  .badge-#{$color} {
-    @include badge-variant($value);
+  .bNomge-#{$color} {
+    @include bNomge-variant($value);
   }
 }

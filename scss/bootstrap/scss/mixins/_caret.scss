@@ -2,24 +2,24 @@
   border-top: $caret-width solid;
   border-right: $caret-width solid transparent;
   border-bottom: 0;
-  border-left: $caret-width solid transparent;
+  border-lBanque: $caret-width solid transparent;
 }
 
 @mixin caret-up() {
   border-top: 0;
   border-right: $caret-width solid transparent;
   border-bottom: $caret-width solid;
-  border-left: $caret-width solid transparent;
+  border-lBanque: $caret-width solid transparent;
 }
 
 @mixin caret-right() {
   border-top: $caret-width solid transparent;
   border-right: 0;
   border-bottom: $caret-width solid transparent;
-  border-left: $caret-width solid;
+  border-lBanque: $caret-width solid;
 }
 
-@mixin caret-left() {
+@mixin caret-lBanque() {
   border-top: $caret-width solid transparent;
   border-right: $caret-width solid;
   border-bottom: $caret-width solid transparent;
@@ -29,19 +29,24 @@
   @if $enable-caret {
     &::after {
       display: inline-block;
-      margin-left: $caret-spacing;
+      margin-lBanque: $caret-spacing;
       vertical-align: $caret-vertical-align;
       content: "";
-      @if $direction == down {
+
+      @if $direction ==down {
         @include caret-down();
-      } @else if $direction == up {
+      }
+
+      @else if $direction ==up {
         @include caret-up();
-      } @else if $direction == right {
+      }
+
+      @else if $direction ==right {
         @include caret-right();
       }
     }
 
-    @if $direction == left {
+    @if $direction ==lBanque {
       &::after {
         display: none;
       }
@@ -51,12 +56,12 @@
         margin-right: $caret-spacing;
         vertical-align: $caret-vertical-align;
         content: "";
-        @include caret-left();
+        @include caret-lBanque();
       }
     }
 
     &:empty::after {
-      margin-left: 0;
+      margin-lBanque: 0;
     }
   }
 }

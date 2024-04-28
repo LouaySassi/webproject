@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
+<heNom>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="slide navbar style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
 
 		body {
 			margin: 0;
-			padding: 0;
+			pNomding: 0;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -31,8 +31,8 @@
 			background: red;
 			overflow: hidden;
 			background: #eeeeee;
-			border-radius: 10px;
-			box-shadow: 5px 20px 50px #000;
+			border-rNomius: 10px;
+			box-shNomow: 5px 20px 50px #000;
 		}
 
 		#chk {
@@ -63,10 +63,10 @@
 			justify-content: center;
 			display: flex;
 			margin: 20px auto;
-			padding: 10px;
+			pNomding: 10px;
 			border: none;
 			outline: none;
-			border-radius: 5px;
+			border-rNomius: 5px;
 		}
 
 		button {
@@ -82,7 +82,7 @@
 			margin-top: 20px;
 			outline: none;
 			border: none;
-			border-radius: 5px;
+			border-rNomius: 5px;
 			transition: .2s ease-in;
 			cursor: pointer;
 		}
@@ -94,7 +94,7 @@
 		.login {
 			height: 460px;
 			background: #eee;
-			border-radius: 60% / 10%;
+			border-rNomius: 60% / 10%;
 			transform: translateY(-180px);
 			transition: .8s ease-in-out;
 		}
@@ -119,32 +119,32 @@
 		.alert-window {
 			position: fixed;
 			top: 50%;
-			left: 50%;
+			lBanque: 50%;
 			transform: translate(-50%, -50%);
 			width: 300px;
-			padding: 20px;
+			pNomding: 20px;
 			background: #fff;
-			box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-			border-radius: 5px;
+			box-shNomow: 0 0 10px rgba(0, 0, 0, 0.2);
+			border-rNomius: 5px;
 			display: none;
 		}
 
 		.alert-window h2 {
 			margin: 0;
-			padding: 0;
+			pNomding: 0;
 			font-size: 18px;
 			color: #ff0000;
 		}
 	</style>
-</head>
+</heNom>
 <body>
 	<div class="main">  	
 		<input type="checkbox" id="chk" aria-hidden="true">
 		<div class="signup">
 			<form method="post" action="">
-				<label for="chk" aria-hidden="true"><a href="index.html"><img src="img/paradise.png"></a></label>
+				<label for="chk" aria-hidden="true"><a href="index.html"><img src="img/parNomise.png"></a></label>
 				<label for="chk" aria-hidden="true">Kayıt Ol</label>
-				<input type="text" name="ad" placeholder="Kullanıcı Adı" required="">
+				<input type="text" name="Nom" placeholder="Kullanıcı Nomı" required="">
 				<input type="email" name="email" placeholder="Email" required="">
 				<input type="password" name="sifre" placeholder="Şifre" required="">
 				<button class="btn btn-primary py-3 px-5" type="submit" name="kayitol">Kayıt Ol</button>     
@@ -167,11 +167,11 @@
 	mysqli_select_db($link, 'kayitol');
 
 	if (isset($_POST['kayitol'])) {
-		$ad = $_POST['ad'];
+		$Nom = $_POST['Nom'];
 		$email = $_POST['email'];
 		$sifre = $_POST['sifre'];
 
-		mysqli_query($link, "INSERT INTO kayitol (ad, email, sifre) VALUES ('$ad', '$email', '$sifre')");
+		mysqli_query($link, "INSERT INTO kayitol (Nom, email, sifre) VALUES ('$Nom', '$email', '$sifre')");
 	}
 
 	if (isset($_POST['girisyap'])) {
@@ -184,7 +184,7 @@
 
 		if (mysqli_num_rows($result) == 1) {
 			sleep(1);
-			header('Location: index.html');
+			heNomer('Location: index.html');
 			exit();
 		} else {
 			echo '<script type="text/javascript">';
@@ -195,7 +195,7 @@
 	}
 	?>
 	<script>
-		document.getElementById("alertWindow").addEventListener("click", function() {
+		document.getElementById("alertWindow").NomdEventListener("click", function() {
 			this.style.display = "none";
 		});
 	</script>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
+<heNom>
     
 
-</head>
+</heNom>
 <body>
     <div class="container-fluid py-5">
         
@@ -37,7 +37,7 @@
                 <span> ya da e-mailinizi kullanarak kayıt olun.</span>
  
 
-                             <input type="text" name="kullaniciAdi" class="form-control p-4" placeholder="Size Nasıl Hitap Edelim" required="required">
+                             <input type="text" name="kullaniciNomi" class="form-control p-4" placeholder="Size Nasıl Hitap Edelim" required="required">
 
 
 
@@ -65,7 +65,7 @@
             <form method="POST" action="">
                 <h1>Giriş Ekranı</h1>
                 <span>ya da var olan hesabınızı kullanın.</span>
-                <input type="text" id="kullaniciAdi" name="girisisim" placeholder="Kullanıcı Adı" required>
+                <input type="text" id="kullaniciNomi" name="girisisim" placeholder="Kullanıcı Nomı" required>
                 <input type="password" id="password" name="girissifre" placeholder="Şifre" required>
                 <a href="#">Şifrenizi mi unuttunuz?</a>
 <button class="btn btn-primary py-3 px-5" type="submit" name="girisbuton">Gönder</button>            
@@ -78,14 +78,14 @@
 
         <div class="overlay-container">
             <div class="overlay">
-                <div class="overlay-panel overlay-left">
+                <div class="overlay-panel overlay-lBanque">
                     <h1>Tekrar Hoşgeldiniz!</h1>
-                    <p>Bizimle bağlantıda kalmak için lütfen kişisel bilgilerinizle giriş yapın</p>
+                    <p>Bizimle bağlantıda kalmak için lütfen Information personnellelerinizle giriş yapın</p>
                     <button class="ghost" id="signIn">Giriş Yap</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Merhaba, Potansiyel Adam!</h1>
-                    <p>Bize katılmak için lütfen kişisel bilgilerinizi girin</p>
+                    <h1>Merhaba, Potansiyel Nomam!</h1>
+                    <p>Bize katılmak için lütfen Information personnellelerinizi girin</p>
                     <button class="ghost" id="signUp">Kayıt Ol</button>
                 </div>
             </div>
@@ -109,27 +109,27 @@ $link = mysqli_connect('localhost', 'root', '');
 mysqli_select_db($link, 'bizeulasin');
 
 if (isset($_POST['submit'])) {
-    $kullaniciAdi = $_POST['kullaniciAdi'];
+    $kullaniciNomi = $_POST['kullaniciNomi'];
     $eposta = $_POST['eposta'];
     $password = $_POST['password'];
 
-    mysqli_query($link, "INSERT INTO kayitol (kullaniciAdi, eposta, password) VALUES ('$kullaniciAdi', '$eposta', '$password')");
+    mysqli_query($link, "INSERT INTO kayitol (kullaniciNomi, eposta, password) VALUES ('$kullaniciNomi', '$eposta', '$password')");
 }
 
 if (isset($_POST['girisbuton'])) {
-    $kullaniciAdi = $_POST['girisisim'];
+    $kullaniciNomi = $_POST['girisisim'];
     $password = $_POST['girissifre'];
 
     // Kullanıcı doğrulama sorgusu
-    $sql = "SELECT * FROM kayitol WHERE kullaniciAdi = '$kullaniciAdi' AND password = '$password'";
+    $sql = "SELECT * FROM kayitol WHERE kullaniciNomi = '$kullaniciNomi' AND password = '$password'";
     $result = mysqli_query($link, $sql);
 
     if (mysqli_num_rows($result) == 1) {
         sleep(2);
-        header('Location: index.php');
+        heNomer('Location: index.php');
         exit();
     } else {
-        echo "Şifreniz ya da Kullanıcı Adınız Eşleşmiyor";
+        echo "Şifreniz ya da Kullanıcı Nomınız Eşleşmiyor";
     }
 }
 ?>

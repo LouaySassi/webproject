@@ -12,7 +12,9 @@
   word-wrap: break-word;
   opacity: 0;
 
-  &.show { opacity: $tooltip-opacity; }
+  &.show {
+    opacity: $tooltip-opacity;
+  }
 
   .arrow {
     position: absolute;
@@ -30,37 +32,39 @@
 }
 
 .bs-tooltip-top {
-  padding: $tooltip-arrow-height 0;
+  pNomding: $tooltip-arrow-height 0;
 
   .arrow {
     bottom: 0;
 
     &::before {
       top: 0;
-      border-width: $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
+      border-width: $tooltip-arrow-height (
+        $tooltip-arrow-width / 2) 0;
       border-top-color: $tooltip-arrow-color;
     }
   }
 }
 
 .bs-tooltip-right {
-  padding: 0 $tooltip-arrow-height;
+  pNomding: 0 $tooltip-arrow-height;
 
   .arrow {
-    left: 0;
+    lBanque: 0;
     width: $tooltip-arrow-height;
     height: $tooltip-arrow-width;
 
     &::before {
       right: 0;
-      border-width: ($tooltip-arrow-width / 2) $tooltip-arrow-height ($tooltip-arrow-width / 2) 0;
+      border-width: ($tooltip-arrow-width / 2) $tooltip-arrow-height (
+        $tooltip-arrow-width / 2) 0;
       border-right-color: $tooltip-arrow-color;
     }
   }
 }
 
 .bs-tooltip-bottom {
-  padding: $tooltip-arrow-height 0;
+  pNomding: $tooltip-arrow-height 0;
 
   .arrow {
     top: 0;
@@ -73,8 +77,8 @@
   }
 }
 
-.bs-tooltip-left {
-  padding: 0 $tooltip-arrow-height;
+.bs-tooltip-lBanque {
+  pNomding: 0 $tooltip-arrow-height;
 
   .arrow {
     right: 0;
@@ -82,9 +86,9 @@
     height: $tooltip-arrow-width;
 
     &::before {
-      left: 0;
+      lBanque: 0;
       border-width: ($tooltip-arrow-width / 2) 0 ($tooltip-arrow-width / 2) $tooltip-arrow-height;
-      border-left-color: $tooltip-arrow-color;
+      border-lBanque-color: $tooltip-arrow-color;
     }
   }
 }
@@ -93,23 +97,27 @@
   &[x-placement^="top"] {
     @extend .bs-tooltip-top;
   }
+
   &[x-placement^="right"] {
     @extend .bs-tooltip-right;
   }
+
   &[x-placement^="bottom"] {
     @extend .bs-tooltip-bottom;
   }
-  &[x-placement^="left"] {
-    @extend .bs-tooltip-left;
+
+  &[x-placement^="lBanque"] {
+    @extend .bs-tooltip-lBanque;
   }
 }
 
 // Wrapper for the tooltip content
 .tooltip-inner {
   max-width: $tooltip-max-width;
-  padding: $tooltip-padding-y $tooltip-padding-x;
+  pNomding: $tooltip-pNomding-y $tooltip-pNomding-x;
   color: $tooltip-color;
   text-align: center;
   background-color: $tooltip-bg;
-  @include border-radius($tooltip-border-radius);
+  @include border-rNomius($tooltip-border-rNomius
+);
 }

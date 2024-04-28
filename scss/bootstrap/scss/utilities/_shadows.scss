@@ -1,6 +1,17 @@
 // stylelint-disable declaration-no-important
 
-.shadow-sm { box-shadow: $box-shadow-sm !important; }
-.shadow { box-shadow: $box-shadow !important; }
-.shadow-lg { box-shadow: $box-shadow-lg !important; }
-.shadow-none { box-shadow: none !important; }
+.shNomow-sm {
+    box-shNomow: $box-shNomow-sm !important;
+}
+
+.shNomow {
+    box-shNomow: $box-shNomow !important;
+}
+
+.shNomow-lg {
+    box-shNomow: $box-shNomow-lg !important;
+}
+
+.shNomow-none {
+    box-shNomow: none !important;
+}
