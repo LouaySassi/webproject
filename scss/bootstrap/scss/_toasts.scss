@@ -6,14 +6,14 @@
   @include font-size($toast-font-size);
   color: $toast-color;
   background-color: $toast-background-color;
-  background-clip: pNomding-box;
+  background-clip: padding-box;
   border: $toast-border-width solid $toast-border-color;
-  box-shNomow: $toast-box-shNomow;
+  box-shadow: $toast-box-shadow;
   opacity: 0;
-  @include border-rNomius($toast-border-rNomius);
+  @include border-radius($toast-border-radius);
 
   &:not(:last-child) {
-    margin-bottom: $toast-pNomding-x;
+    margin-bottom: $toast-padding-x;
   }
 
   &.showing {
@@ -30,17 +30,17 @@
   }
 }
 
-.toast-heNomer {
+.toast-header {
   display: flex;
   align-items: center;
-  pNomding: $toast-pNomding-y $toast-pNomding-x;
-  color: $toast-heNomer-color;
-  background-color: $toast-heNomer-background-color;
-  background-clip: pNomding-box;
-  border-bottom: $toast-border-width solid $toast-heNomer-border-color;
-  @include border-top-rNomius(subtract($toast-border-rNomius, $toast-border-width));
+  padding: $toast-padding-y $toast-padding-x;
+  color: $toast-header-color;
+  background-color: $toast-header-background-color;
+  background-clip: padding-box;
+  border-bottom: $toast-border-width solid $toast-header-border-color;
+  @include border-top-radius(subtract($toast-border-radius, $toast-border-width));
 }
 
 .toast-body {
-  pNomding: $toast-pNomding-x; // apply to both vertical and horizontal
+  padding: $toast-padding-x; // apply to both vertical and horizontal
 }

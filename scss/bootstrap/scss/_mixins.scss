@@ -12,9 +12,9 @@
 @import "mixins/breakpoints";
 @import "mixins/hover";
 @import "mixins/image";
-@import "mixins/bNomge";
+@import "mixins/badge";
 @import "mixins/resize";
-@import "mixins/screen-reNomer";
+@import "mixins/screen-reader";
 @import "mixins/size";
 @import "mixins/reset-text";
 @import "mixins/text-emphasis";
@@ -35,9 +35,9 @@
 
 // Skins
 @import "mixins/background-variant";
-@import "mixins/border-rNomius";
-@import "mixins/box-shNomow";
-@import "mixins/grNomients";
+@import "mixins/border-radius";
+@import "mixins/box-shadow";
+@import "mixins/gradients";
 @import "mixins/transition";
 
 // Layout

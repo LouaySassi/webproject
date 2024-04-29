@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 * {
@@ -6,8 +7,8 @@
 
 body {
 	background-image: url("https://replicate.delivery/pbxt/hmt1WP3F6Qp4Gxe3lof8zlPbThNs7QNMayIBB9wDERKFfS5hA/output.png");
-	background-size: cover;
-	background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -19,28 +20,28 @@ body {
 
 /********** Template CSS **********/
 :root {
-	--primary: #F77D0A;
-	--secondary: #2B2E4A;
-	--light: #F4F5F8;
-	--dark: #1C1E32;
+    --primary: #F77D0A;
+    --secondary: #2B2E4A;
+    --light: #F4F5F8;
+    --dark: #1C1E32;
 }
 
 h1,
 h2,
 .font-weight-bold {
-	font-weight: 700 !important;
+    font-weight: 700 !important;
 }
 
 h3,
 h4,
 .font-weight-semi-bold {
-	font-weight: 600 !important;
+    font-weight: 600 !important;
 }
 
 h5,
 h6,
 .font-weight-medium {
-	font-weight: 500 !important;
+    font-weight: 500 !important;
 }
 
 p {
@@ -63,13 +64,13 @@ a {
 }
 
 button {
-	border-rNomius: 20px;
+	border-radius: 20px;
 	border: 1px solid #2B2E4A;
 	background-color: #2B2E4A;
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
-	pNomding: 12px 45px;
+	padding: 12px 45px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
@@ -94,7 +95,7 @@ form {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	pNomding: 0 50px;
+	padding: 0 50px;
 	height: 100%;
 	text-align: center;
 }
@@ -102,16 +103,16 @@ form {
 input {
 	background-color: #eee;
 	border: none;
-	pNomding: 12px 15px;
+	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
 }
 
 .container {
 	background-color: #fff;
-	border-rNomius: 10px;
-	box-shNomow: 0 14px 28px rgba(0, 0, 0, 0.25),
-		0 10px 10px rgba(0, 0, 0, 0.22);
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
 	width: 768px;
@@ -127,7 +128,7 @@ input {
 }
 
 .sign-in-container {
-	lBanque: 0;
+	left: 0;
 	width: 50%;
 	z-index: 2;
 }
@@ -137,7 +138,7 @@ input {
 }
 
 .sign-up-container {
-	lBanque: 0;
+	left: 0;
 	width: 50%;
 	opacity: 0;
 	z-index: 1;
@@ -151,15 +152,12 @@ input {
 }
 
 @keyframes show {
-
-	0%,
-	49.99% {
+	0%, 49.99% {
 		opacity: 0;
 		z-index: 1;
 	}
-
-	50%,
-	100% {
+	
+	50%, 100% {
 		opacity: 1;
 		z-index: 5;
 	}
@@ -168,7 +166,7 @@ input {
 .overlay-container {
 	position: absolute;
 	top: 0;
-	lBanque: 50%;
+	left: 50%;
 	width: 50%;
 	height: 100%;
 	overflow: hidden;
@@ -176,28 +174,28 @@ input {
 	z-index: 100;
 }
 
-.container.right-panel-active .overlay-container {
+.container.right-panel-active .overlay-container{
 	transform: translateX(-100%);
 }
 
 .overlay {
 	background: #FF416C;
-	background: -webkit-linear-grNomient(to right, #2B2E4A, #2B2E4A);
-	background: linear-grNomient(to right, #2B2E4A, #2B2E4A);
+	background: -webkit-linear-gradient(to right, #2B2E4A, #2B2E4A);
+	background: linear-gradient(to right, #2B2E4A, #2B2E4A);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
 	color: #FFFFFF;
 	position: relative;
-	lBanque: -100%;
+	left: -100%;
 	height: 100%;
 	width: 200%;
-	transform: translateX(0);
+  	transform: translateX(0);
 	transition: transform 0.6s ease-in-out;
 }
 
 .container.right-panel-active .overlay {
-	transform: translateX(50%);
+  	transform: translateX(50%);
 }
 
 .overlay-panel {
@@ -206,7 +204,7 @@ input {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	pNomding: 0 40px;
+	padding: 0 40px;
 	text-align: center;
 	top: 0;
 	height: 100%;
@@ -215,11 +213,11 @@ input {
 	transition: transform 0.6s ease-in-out;
 }
 
-.overlay-lBanque {
+.overlay-left {
 	transform: translateX(-20%);
 }
 
-.container.right-panel-active .overlay-lBanque {
+.container.right-panel-active .overlay-left {
 	transform: translateX(0);
 }
 
@@ -238,7 +236,7 @@ input {
 
 .social-container a {
 	border: 1px solid #DDDDDD;
-	border-rNomius: 50%;
+	border-radius: 50%;
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -248,31 +246,29 @@ input {
 }
 
 footer {
-	background-color: #222;
-	color: #fff;
-	font-size: 14px;
-	bottom: 0;
-	position: fixed;
-	lBanque: 0;
-	right: 0;
-	text-align: center;
-	z-index: 999;
-	pNomding: 10px;
-	/* Eksik olan kısım */
-	box-sizing: border-box;
-	/* Eksik olan kısım */
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+    padding: 10px; /* Eksik olan kısım */
+    box-sizing: border-box; /* Eksik olan kısım */
 }
 
 
 footer p {
-	margin: 10px 0;
+    margin: 10px 0;
 }
 
 footer i {
-	color: red;
+    color: red;
 }
 
 footer a {
-	color: #3c97bf;
-	text-decoration: none;
+    color: #3c97bf;
+    text-decoration: none;
 }

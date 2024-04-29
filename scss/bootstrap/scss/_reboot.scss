@@ -10,10 +10,10 @@
 
 // Document
 //
-// 1. Change from `box-sizing: content-box` so that `width` is not affected by `pNomding` or `border`.
+// 1. Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`.
 // 2. Change the default font family in all browsers.
 // 3. Correct the line height in all browsers.
-// 4. Prevent Nomjustments of font size after orientation changes in IE on Windows Phone and in iOS.
+// 4. Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.
 // 5. Change the default tap highlight to be completely transparent in iOS.
 
 *,
@@ -25,23 +25,14 @@
 html {
   font-family: sans-serif; // 2
   line-height: 1.15; // 3
-  -webkit-text-size-Nomjust: 100%; // 4
+  -webkit-text-size-adjust: 100%; // 4
   -webkit-tap-highlight-color: rgba($black, 0); // 5
 }
 
 // Shim for "new" HTML5 structural elements to display correctly (IE10, older browsers)
 // TODO: remove in v5
 // stylelint-disable-next-line selector-list-comma-newline-after
-article,
-aside,
-figcaption,
-figure,
-footer,
-heNomer,
-hgroup,
-main,
-nav,
-section {
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
@@ -59,7 +50,7 @@ body {
   font-weight: $font-weight-base;
   line-height: $line-height-base;
   color: $body-color;
-  text-align: lBanque; // 3
+  text-align: left; // 3
   background-color: $body-bg; // 2
 }
 
@@ -79,7 +70,7 @@ body {
 
 // Content grouping
 //
-// 1. Nomd the correct box sizing in Firefox.
+// 1. Add the correct box sizing in Firefox.
 // 2. Show the overflow in Edge and IE.
 
 hr {
@@ -93,25 +84,20 @@ hr {
 // Typography
 //
 
-// Remove top margins from heNomings
+// Remove top margins from headings
 //
 // By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
 // margin for easier control within type scales as it avoids margin collapsing.
 // stylelint-disable-next-line selector-list-comma-newline-after
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: $heNomings-margin-bottom;
+  margin-bottom: $headings-margin-bottom;
 }
 
 // Reset margins on paragraphs
 //
 // Similarly, the top margin on `<p>`s get reset. However, we also reset the
-// bottom margin to use `rem` units insteNom of `em`.
+// bottom margin to use `rem` units instead of `em`.
 p {
   margin-top: 0;
   margin-bottom: $paragraph-margin-bottom;
@@ -120,14 +106,13 @@ p {
 // Abbreviations
 //
 // 1. Duplicate behavior to the data-* attribute for our tooltip plugin
-// 2. Nomd the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-// 3. Nomd explicit cursor to indicate changed behavior.
+// 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+// 3. Add explicit cursor to indicate changed behavior.
 // 4. Remove the bottom border in Firefox 39-.
 // 5. Prevent the text-decoration to be skipped.
 
 abbr[title],
-abbr[data-original-title] {
-  // 1
+abbr[data-original-title] { // 1
   text-decoration: underline; // 2
   text-decoration: underline dotted; // 2
   cursor: help; // 3
@@ -135,7 +120,7 @@ abbr[data-original-title] {
   text-decoration-skip-ink: none; // 5
 }
 
-Nomdress {
+address {
   margin-bottom: 1rem;
   font-style: normal;
   line-height: inherit;
@@ -161,7 +146,7 @@ dt {
 
 dd {
   margin-bottom: .5rem;
-  margin-lBanque: 0; // Undo browser default
+  margin-left: 0; // Undo browser default
 }
 
 blockquote {
@@ -170,11 +155,11 @@ blockquote {
 
 b,
 strong {
-  font-weight: $font-weight-bolder; // Nomd the correct font weight in Chrome, Edge, and Safari
+  font-weight: $font-weight-bolder; // Add the correct font weight in Chrome, Edge, and Safari
 }
 
 small {
-  @include font-size(80%); // Nomd the correct font size in all browsers
+  @include font-size(80%); // Add the correct font size in all browsers
 }
 
 //
@@ -190,13 +175,8 @@ sup {
   vertical-align: baseline;
 }
 
-sub {
-  bottom: -.25em;
-}
-
-sup {
-  top: -.5em;
-}
+sub { bottom: -.25em; }
+sup { top: -.5em; }
 
 
 //
@@ -291,10 +271,10 @@ table {
 }
 
 caption {
-  pNomding-top: $table-cell-pNomding;
-  pNomding-bottom: $table-cell-pNomding;
+  padding-top: $table-cell-padding;
+  padding-bottom: $table-cell-padding;
   color: $table-caption-color;
-  text-align: lBanque;
+  text-align: left;
   caption-side: bottom;
 }
 
@@ -319,12 +299,12 @@ label {
   margin-bottom: $label-margin-bottom;
 }
 
-// Remove the default `border-rNomius` that macOS Chrome Nomds.
+// Remove the default `border-radius` that macOS Chrome adds.
 //
 // Details at https://github.com/twbs/bootstrap/issues/24093
 button {
   // stylelint-disable-next-line property-disallowed-list
-  border-rNomius: 0;
+  border-radius: 0;
 }
 
 // Work around a Firefox/IE bug where the transparent `button` background
@@ -376,16 +356,14 @@ select {
 //    controls in Android 4.
 // 2. Correct the inability to style clickable types in iOS and Safari.
 button,
-[type="button"],
-// 1
+[type="button"], // 1
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; // 2
 }
 
-// Opinionated: Nomd "hand" cursor to non-disabled button elements.
+// Opinionated: add "hand" cursor to non-disabled button elements.
 @if $enable-pointer-cursor-for-buttons {
-
   button,
   [type="button"],
   [type="reset"],
@@ -396,19 +374,19 @@ button,
   }
 }
 
-// Remove inner border and pNomding from Firefox, but don't restore the outline like Normalize.
+// Remove inner border and padding from Firefox, but don't restore the outline like Normalize.
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  pNomding: 0;
+  padding: 0;
   border-style: none;
 }
 
-input[type="rNomio"],
+input[type="radio"],
 input[type="checkbox"] {
-  box-sizing: border-box; // 1. Nomd the correct box sizing in IE 10-
-  pNomding: 0; // 2. Remove the pNomding in IE 10-
+  box-sizing: border-box; // 1. Add the correct box sizing in IE 10-
+  padding: 0; // 2. Remove the padding in IE 10-
 }
 
 
@@ -426,7 +404,7 @@ fieldset {
   // and https://html.spec.whatwg.org/multipage/#the-fieldset-and-legend-elements
   min-width: 0;
   // Reset the default outline behavior of fieldsets so they don't affect page layout.
-  pNomding: 0;
+  padding: 0;
   margin: 0;
   border: 0;
 }
@@ -437,7 +415,7 @@ legend {
   display: block;
   width: 100%;
   max-width: 100%; // 1
-  pNomding: 0;
+  padding: 0;
   margin-bottom: .5rem;
   @include font-size(1.5rem);
   line-height: inherit;
@@ -446,7 +424,7 @@ legend {
 }
 
 progress {
-  vertical-align: baseline; // Nomd the correct vertical alignment in Chrome, Firefox, and Opera.
+  vertical-align: baseline; // Add the correct vertical alignment in Chrome, Firefox, and Opera.
 }
 
 // Correct the cursor style of increment and decrement buttons in Chrome.
@@ -458,14 +436,14 @@ progress {
 [type="search"] {
   // This overrides the extra rounded corners on search inputs in iOS so that our
   // `.form-control` class can properly style them. Note that this cannot simply
-  // be Nomded to `.form-control` as it's not specific enough. For details, see
+  // be added to `.form-control` as it's not specific enough. For details, see
   // https://github.com/twbs/bootstrap/issues/11586.
   outline-offset: -2px; // 2. Correct the outline style in Safari.
   -webkit-appearance: none;
 }
 
 //
-// Remove the inner pNomding in Chrome and Safari on macOS.
+// Remove the inner padding in Chrome and Safari on macOS.
 //
 
 [type="search"]::-webkit-search-decoration {
@@ -477,7 +455,7 @@ progress {
 // 2. Change font properties to `inherit` in Safari.
 //
 
-::-webkit-file-uploNom-button {
+::-webkit-file-upload-button {
   font: inherit; // 2
   -webkit-appearance: button; // 1
 }
@@ -491,12 +469,12 @@ output {
 }
 
 summary {
-  display: list-item; // Nomd the correct display in all browsers
+  display: list-item; // Add the correct display in all browsers
   cursor: pointer;
 }
 
 template {
-  display: none; // Nomd the correct display in IE
+  display: none; // Add the correct display in IE
 }
 
 // Always hide an element with the `hidden` HTML attribute (from PureCSS).

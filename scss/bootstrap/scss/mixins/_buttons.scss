@@ -5,29 +5,26 @@
 
 @mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
   color: color-yiq($background);
-  @include grNomient-bg($background);
+  @include gradient-bg($background);
   border-color: $border;
-  @include box-shNomow($btn-box-shNomow);
+  @include box-shadow($btn-box-shadow);
 
   @include hover() {
     color: color-yiq($hover-background);
-    @include grNomient-bg($hover-background);
+    @include gradient-bg($hover-background);
     border-color: $hover-border;
   }
 
   &:focus,
   &.focus {
     color: color-yiq($hover-background);
-    @include grNomient-bg($hover-background);
+    @include gradient-bg($hover-background);
     border-color: $hover-border;
-
-    @if $enable-shNomows {
-      @include box-shNomow($btn-box-shNomow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5));
-    }
-
-    @else {
-      // Avoid using mixin so we can pass custom focus shNomow properly
-      box-shNomow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+    @if $enable-shadows {
+      @include box-shadow($btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5));
+    } @else {
+      // Avoid using mixin so we can pass custom focus shadow properly
+      box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
     }
   }
 
@@ -37,33 +34,28 @@
     color: color-yiq($background);
     background-color: $background;
     border-color: $border;
-
-    // Remove CSS grNomients if they're enabled
-    @if $enable-grNomients {
+    // Remove CSS gradients if they're enabled
+    @if $enable-gradients {
       background-image: none;
     }
   }
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
-  .show>&.dropdown-toggle {
+  .show > &.dropdown-toggle {
     color: color-yiq($active-background);
     background-color: $active-background;
-
-    @if $enable-grNomients {
-      background-image: none; // Remove the grNomient for the pressed/active state
+    @if $enable-gradients {
+      background-image: none; // Remove the gradient for the pressed/active state
     }
-
     border-color: $active-border;
 
     &:focus {
-      @if $enable-shNomows and $btn-active-box-shNomow !=none {
-        @include box-shNomow($btn-active-box-shNomow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5));
-      }
-
-      @else {
-        // Avoid using mixin so we can pass custom focus shNomow properly
-        box-shNomow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
+      @if $enable-shadows and $btn-active-box-shadow != none {
+        @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5));
+      } @else {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: 0 0 0 $btn-focus-width rgba(mix(color-yiq($background), $border, 15%), .5);
       }
     }
   }
@@ -81,7 +73,7 @@
 
   &:focus,
   &.focus {
-    box-shNomow: 0 0 0 $btn-focus-width rgba($color, .5);
+    box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
   }
 
   &.disabled,
@@ -92,29 +84,27 @@
 
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active,
-  .show>&.dropdown-toggle {
+  .show > &.dropdown-toggle {
     color: color-yiq($active-background);
     background-color: $active-background;
     border-color: $active-border;
 
     &:focus {
-      @if $enable-shNomows and $btn-active-box-shNomow !=none {
-        @include box-shNomow($btn-active-box-shNomow, 0 0 0 $btn-focus-width rgba($color, .5));
-      }
-
-      @else {
-        // Avoid using mixin so we can pass custom focus shNomow properly
-        box-shNomow: 0 0 0 $btn-focus-width rgba($color, .5);
+      @if $enable-shadows and $btn-active-box-shadow != none {
+        @include box-shadow($btn-active-box-shadow, 0 0 0 $btn-focus-width rgba($color, .5));
+      } @else {
+        // Avoid using mixin so we can pass custom focus shadow properly
+        box-shadow: 0 0 0 $btn-focus-width rgba($color, .5);
       }
     }
   }
 }
 
 // Button sizes
-@mixin button-size($pNomding-y, $pNomding-x, $font-size, $line-height, $border-rNomius) {
-  pNomding: $pNomding-y $pNomding-x;
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
   @include font-size($font-size);
   line-height: $line-height;
   // Manually declare to provide an override to the browser default
-  @include border-rNomius($border-rNomius, 0);
+  @include border-radius($border-radius, 0);
 }

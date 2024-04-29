@@ -1,4 +1,4 @@
-@mixin bNomge-variant($bg) {
+@mixin badge-variant($bg) {
   color: color-yiq($bg);
   background-color: $bg;
 
@@ -11,7 +11,7 @@
     &:focus,
     &.focus {
       outline: 0;
-      box-shNomow: 0 0 0 $bNomge-focus-width rgba($bg, .5);
+      box-shadow: 0 0 0 $badge-focus-width rgba($bg, .5);
     }
   }
 }

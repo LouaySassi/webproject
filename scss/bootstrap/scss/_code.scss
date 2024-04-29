@@ -5,25 +5,25 @@ code {
   word-wrap: break-word;
 
   // Streamline the style when inside anchors to avoid broken underline and more
-  a>& {
+  a > & {
     color: inherit;
   }
 }
 
 // User input typically entered via keyboard
 kbd {
-  pNomding: $kbd-pNomding-y $kbd-pNomding-x;
+  padding: $kbd-padding-y $kbd-padding-x;
   @include font-size($kbd-font-size);
   color: $kbd-color;
   background-color: $kbd-bg;
-  @include border-rNomius($border-rNomius-sm);
-  @include box-shNomow($kbd-box-shNomow);
+  @include border-radius($border-radius-sm);
+  @include box-shadow($kbd-box-shadow);
 
   kbd {
-    pNomding: 0;
+    padding: 0;
     @include font-size(100%);
     font-weight: $nested-kbd-font-weight;
-    @include box-shNomow(none);
+    @include box-shadow(none);
   }
 }
 

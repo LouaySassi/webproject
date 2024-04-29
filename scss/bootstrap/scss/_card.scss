@@ -12,32 +12,32 @@
   background-color: $card-bg;
   background-clip: border-box;
   border: $card-border-width solid $card-border-color;
-  @include border-rNomius($card-border-rNomius);
+  @include border-radius($card-border-radius);
 
-  >hr {
+  > hr {
     margin-right: 0;
-    margin-lBanque: 0;
+    margin-left: 0;
   }
 
-  >.list-group {
+  > .list-group {
     border-top: inherit;
     border-bottom: inherit;
 
     &:first-child {
       border-top-width: 0;
-      @include border-top-rNomius($card-inner-border-rNomius);
+      @include border-top-radius($card-inner-border-radius);
     }
 
-    &:last-child {
+    &:last-child  {
       border-bottom-width: 0;
-      @include border-bottom-rNomius($card-inner-border-rNomius);
+      @include border-bottom-radius($card-inner-border-radius);
     }
   }
 
   // Due to specificity of the above selector (`.card > .list-group`), we must
   // use a child selector here to prevent double borders.
-  >.card-heNomer+.list-group,
-  >.list-group+.card-footer {
+  > .card-header + .list-group,
+  > .list-group + .card-footer {
     border-top: 0;
   }
 }
@@ -49,7 +49,7 @@
   // Workaround for the image size bug in IE
   // See: https://github.com/twbs/bootstrap/pull/28855
   min-height: 1px;
-  pNomding: $card-spacer-x;
+  padding: $card-spacer-x;
   color: $card-color;
 }
 
@@ -71,8 +71,8 @@
     text-decoration: none;
   }
 
-  +.card-link {
-    margin-lBanque: $card-spacer-x;
+  + .card-link {
+    margin-left: $card-spacer-x;
   }
 }
 
@@ -80,44 +80,44 @@
 // Optional textual caps
 //
 
-.card-heNomer {
-  pNomding: $card-spacer-y $card-spacer-x;
+.card-header {
+  padding: $card-spacer-y $card-spacer-x;
   margin-bottom: 0; // Removes the default margin-bottom of <hN>
   color: $card-cap-color;
   background-color: $card-cap-bg;
   border-bottom: $card-border-width solid $card-border-color;
 
   &:first-child {
-    @include border-rNomius($card-inner-border-rNomius $card-inner-border-rNomius 0 0);
+    @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
   }
 }
 
 .card-footer {
-  pNomding: $card-spacer-y $card-spacer-x;
+  padding: $card-spacer-y $card-spacer-x;
   color: $card-cap-color;
   background-color: $card-cap-bg;
   border-top: $card-border-width solid $card-border-color;
 
   &:last-child {
-    @include border-rNomius(0 0 $card-inner-border-rNomius $card-inner-border-rNomius);
+    @include border-radius(0 0 $card-inner-border-radius $card-inner-border-radius);
   }
 }
 
 
 //
-// HeNomer navs
+// Header navs
 //
 
-.card-heNomer-tabs {
+.card-header-tabs {
   margin-right: -$card-spacer-x / 2;
   margin-bottom: -$card-spacer-y;
-  margin-lBanque: -$card-spacer-x / 2;
+  margin-left: -$card-spacer-x / 2;
   border-bottom: 0;
 }
 
-.card-heNomer-pills {
+.card-header-pills {
   margin-right: -$card-spacer-x / 2;
-  margin-lBanque: -$card-spacer-x / 2;
+  margin-left: -$card-spacer-x / 2;
 }
 
 // Card image
@@ -126,9 +126,9 @@
   top: 0;
   right: 0;
   bottom: 0;
-  lBanque: 0;
-  pNomding: $card-img-overlay-pNomding;
-  @include border-rNomius($card-inner-border-rNomius);
+  left: 0;
+  padding: $card-img-overlay-padding;
+  @include border-radius($card-inner-border-radius);
 }
 
 .card-img,
@@ -140,12 +140,12 @@
 
 .card-img,
 .card-img-top {
-  @include border-top-rNomius($card-inner-border-rNomius);
+  @include border-top-radius($card-inner-border-radius);
 }
 
 .card-img,
 .card-img-bottom {
-  @include border-bottom-rNomius($card-inner-border-rNomius);
+  @include border-bottom-radius($card-inner-border-radius);
 }
 
 
@@ -160,14 +160,14 @@
     display: flex;
     flex-flow: row wrap;
     margin-right: -$card-deck-margin;
-    margin-lBanque: -$card-deck-margin;
+    margin-left: -$card-deck-margin;
 
     .card {
       // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
       flex: 1 0 0%;
       margin-right: $card-deck-margin;
       margin-bottom: 0; // Override the default
-      margin-lBanque: $card-deck-margin;
+      margin-left: $card-deck-margin;
     }
   }
 }
@@ -178,60 +178,56 @@
 //
 
 .card-group {
-
   // The child selector allows nested `.card` within `.card-group`
   // to display properly.
-  >.card {
+  > .card {
     margin-bottom: $card-group-margin;
   }
 
   @include media-breakpoint-up(sm) {
     display: flex;
     flex-flow: row wrap;
-
     // The child selector allows nested `.card` within `.card-group`
     // to display properly.
-    >.card {
+    > .card {
       // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
       flex: 1 0 0%;
       margin-bottom: 0;
 
-      +.card {
-        margin-lBanque: 0;
-        border-lBanque: 0;
+      + .card {
+        margin-left: 0;
+        border-left: 0;
       }
 
       // Handle rounded corners
       @if $enable-rounded {
         &:not(:last-child) {
-          @include border-right-rNomius(0);
+          @include border-right-radius(0);
 
           .card-img-top,
-          .card-heNomer {
+          .card-header {
             // stylelint-disable-next-line property-disallowed-list
-            border-top-right-rNomius: 0;
+            border-top-right-radius: 0;
           }
-
           .card-img-bottom,
           .card-footer {
             // stylelint-disable-next-line property-disallowed-list
-            border-bottom-right-rNomius: 0;
+            border-bottom-right-radius: 0;
           }
         }
 
         &:not(:first-child) {
-          @include border-lBanque-rNomius(0);
+          @include border-left-radius(0);
 
           .card-img-top,
-          .card-heNomer {
+          .card-header {
             // stylelint-disable-next-line property-disallowed-list
-            border-top-lBanque-rNomius: 0;
+            border-top-left-radius: 0;
           }
-
           .card-img-bottom,
           .card-footer {
             // stylelint-disable-next-line property-disallowed-list
-            border-bottom-lBanque-rNomius: 0;
+            border-bottom-left-radius: 0;
           }
         }
       }
@@ -270,20 +266,20 @@
 .accordion {
   overflow-anchor: none;
 
-  >.card {
+  > .card {
     overflow: hidden;
 
     &:not(:last-of-type) {
       border-bottom: 0;
-      @include border-bottom-rNomius(0);
+      @include border-bottom-radius(0);
     }
 
     &:not(:first-of-type) {
-      @include border-top-rNomius(0);
+      @include border-top-radius(0);
     }
 
-    >.card-heNomer {
-      @include border-rNomius(0);
+    > .card-header {
+      @include border-radius(0);
       margin-bottom: -$card-border-width;
     }
   }

@@ -3,7 +3,6 @@
 // Set the container width, and override it for fixed navbars in media queries.
 
 @if $enable-grid-classes {
-
   // Single container class with breakpoint max-widths
   .container,
   // 100% wide container at all breakpoints
@@ -32,7 +31,7 @@
           }
 
           // Once the current breakpoint is reached, stop extending
-          @if ($breakpoint ==$name) {
+          @if ($breakpoint == $name) {
             $extend-breakpoint: false;
           }
         }
@@ -51,16 +50,16 @@
     @include make-row();
   }
 
-  // Remove the negative margin from default .row, then the horizontal pNomding
+  // Remove the negative margin from default .row, then the horizontal padding
   // from all immediate children columns (to prevent runaway style inheritance).
   .no-gutters {
     margin-right: 0;
-    margin-lBanque: 0;
+    margin-left: 0;
 
-    >.col,
-    >[class*="col-"] {
-      pNomding-right: 0;
-      pNomding-lBanque: 0;
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
     }
   }
 }

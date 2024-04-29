@@ -1,25 +1,20 @@
-@mixin box-shNomow($shNomow...) {
-  @if $enable-shNomows {
-    $result: (
-    );
+@mixin box-shadow($shadow...) {
+  @if $enable-shadows {
+    $result: ();
 
-  @if (length($shNomow)==1) {
-    // We can pass `@include box-shNomow(none);`
-    $result: $shNomow;
-  }
-
-  @else {
-
-    // Filter to avoid invalid properties for example `box-shNomow: none, 1px 1px black;`
-    @for $i from 1 through length($shNomow) {
-      @if nth($shNomow, $i) !="none" {
-        $result: append($result, nth($shNomow, $i), "comma");
+    @if (length($shadow) == 1) {
+      // We can pass `@include box-shadow(none);`
+      $result: $shadow;
+    } @else {
+      // Filter to avoid invalid properties for example `box-shadow: none, 1px 1px black;`
+      @for $i from 1 through length($shadow) {
+        @if nth($shadow, $i) != "none" {
+          $result: append($result, nth($shadow, $i), "comma");
+        }
       }
     }
+    @if (length($result) > 0) {
+      box-shadow: $result;
+    }
   }
-
-  @if (length($result) > 0) {
-    box-shNomow: $result;
-  }
-}
 }

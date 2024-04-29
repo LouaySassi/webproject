@@ -7,7 +7,7 @@
   display: inline-flex;
   vertical-align: middle; // match .btn alignment given font-size hack above
 
-  >.btn {
+  > .btn {
     position: relative;
     flex: 1 1 auto;
 
@@ -16,7 +16,6 @@
     @include hover() {
       z-index: 1;
     }
-
     &:focus,
     &:active,
     &.active {
@@ -37,22 +36,21 @@
 }
 
 .btn-group {
-
   // Prevent double borders when buttons are next to each other
-  >.btn:not(:first-child),
-  >.btn-group:not(:first-child) {
-    margin-lBanque: -$btn-border-width;
+  > .btn:not(:first-child),
+  > .btn-group:not(:first-child) {
+    margin-left: -$btn-border-width;
   }
 
   // Reset rounded corners
-  >.btn:not(:last-child):not(.dropdown-toggle),
-  >.btn-group:not(:last-child)>.btn {
-    @include border-right-rNomius(0);
+  > .btn:not(:last-child):not(.dropdown-toggle),
+  > .btn-group:not(:last-child) > .btn {
+    @include border-right-radius(0);
   }
 
-  >.btn:not(:first-child),
-  >.btn-group:not(:first-child)>.btn {
-    @include border-lBanque-rNomius(0);
+  > .btn:not(:first-child),
+  > .btn-group:not(:first-child) > .btn {
+    @include border-left-radius(0);
   }
 }
 
@@ -60,13 +58,8 @@
 //
 // Remix the default button sizing classes into new ones for easier manipulation.
 
-.btn-group-sm>.btn {
-  @extend .btn-sm;
-}
-
-.btn-group-lg>.btn {
-  @extend .btn-lg;
-}
+.btn-group-sm > .btn { @extend .btn-sm; }
+.btn-group-lg > .btn { @extend .btn-lg; }
 
 
 //
@@ -74,39 +67,39 @@
 //
 
 .dropdown-toggle-split {
-  pNomding-right: $btn-pNomding-x * .75;
-  pNomding-lBanque: $btn-pNomding-x * .75;
+  padding-right: $btn-padding-x * .75;
+  padding-left: $btn-padding-x * .75;
 
   &::after,
   .dropup &::after,
   .dropright &::after {
-    margin-lBanque: 0;
+    margin-left: 0;
   }
 
-  .droplBanque &::before {
+  .dropleft &::before {
     margin-right: 0;
   }
 }
 
-.btn-sm+.dropdown-toggle-split {
-  pNomding-right: $btn-pNomding-x-sm * .75;
-  pNomding-lBanque: $btn-pNomding-x-sm * .75;
+.btn-sm + .dropdown-toggle-split {
+  padding-right: $btn-padding-x-sm * .75;
+  padding-left: $btn-padding-x-sm * .75;
 }
 
-.btn-lg+.dropdown-toggle-split {
-  pNomding-right: $btn-pNomding-x-lg * .75;
-  pNomding-lBanque: $btn-pNomding-x-lg * .75;
+.btn-lg + .dropdown-toggle-split {
+  padding-right: $btn-padding-x-lg * .75;
+  padding-left: $btn-padding-x-lg * .75;
 }
 
 
 // The clickable button for toggling the menu
-// Set the same inset shNomow as the :active state
+// Set the same inset shadow as the :active state
 .btn-group.show .dropdown-toggle {
-  @include box-shNomow($btn-active-box-shNomow);
+  @include box-shadow($btn-active-box-shadow);
 
-  // Show no shNomow for `.btn-link` since it has no other button styles.
+  // Show no shadow for `.btn-link` since it has no other button styles.
   &.btn-link {
-    @include box-shNomow(none);
+    @include box-shadow(none);
   }
 }
 
@@ -120,30 +113,30 @@
   align-items: flex-start;
   justify-content: center;
 
-  >.btn,
-  >.btn-group {
+  > .btn,
+  > .btn-group {
     width: 100%;
   }
 
-  >.btn:not(:first-child),
-  >.btn-group:not(:first-child) {
+  > .btn:not(:first-child),
+  > .btn-group:not(:first-child) {
     margin-top: -$btn-border-width;
   }
 
   // Reset rounded corners
-  >.btn:not(:last-child):not(.dropdown-toggle),
-  >.btn-group:not(:last-child)>.btn {
-    @include border-bottom-rNomius(0);
+  > .btn:not(:last-child):not(.dropdown-toggle),
+  > .btn-group:not(:last-child) > .btn {
+    @include border-bottom-radius(0);
   }
 
-  >.btn:not(:first-child),
-  >.btn-group:not(:first-child)>.btn {
-    @include border-top-rNomius(0);
+  > .btn:not(:first-child),
+  > .btn-group:not(:first-child) > .btn {
+    @include border-top-radius(0);
   }
 }
 
 
-// Checkbox and rNomio options
+// Checkbox and radio options
 //
 // In order to support the browser's form validation feedback, powered by the
 // `required` attribute, we have to "hide" the inputs via `clip`. We cannot use
@@ -156,12 +149,11 @@
 // https://github.com/twbs/bootstrap/pull/14559 for more information.
 
 .btn-group-toggle {
-
-  >.btn,
-  >.btn-group>.btn {
+  > .btn,
+  > .btn-group > .btn {
     margin-bottom: 0; // Override default `<label>` value
 
-    input[type="rNomio"],
+    input[type="radio"],
     input[type="checkbox"] {
       position: absolute;
       clip: rect(0, 0, 0, 0);

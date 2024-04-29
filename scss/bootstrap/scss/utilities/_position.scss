@@ -2,9 +2,7 @@
 
 // Common values
 @each $position in $positions {
-  .position-#{$position} {
-    position: $position !important;
-  }
+  .position-#{$position} { position: $position !important; }
 }
 
 // Shorthand
@@ -13,7 +11,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  lBanque: 0;
+  left: 0;
   z-index: $zindex-fixed;
 }
 
@@ -21,7 +19,7 @@
   position: fixed;
   right: 0;
   bottom: 0;
-  lBanque: 0;
+  left: 0;
   z-index: $zindex-fixed;
 }
 

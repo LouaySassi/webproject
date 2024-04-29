@@ -1,82 +1,76 @@
 // stylelint-disable property-disallowed-list
-// Single side border-rNomius
+// Single side border-radius
 
 // Helper function to replace negative values with 0
-@function valid-rNomius($rNomius) {
-  $return: (
-  );
-
-@each $value in $rNomius {
-  @if type-of($value)==number {
-    $return: append($return, max($value, 0));
+@function valid-radius($radius) {
+  $return: ();
+  @each $value in $radius {
+    @if type-of($value) == number {
+      $return: append($return, max($value, 0));
+    } @else {
+      $return: append($return, $value);
+    }
   }
-
-  @else {
-    $return: append($return, $value);
-  }
+  @return $return;
 }
 
-@return $return;
-}
-
-@mixin border-rNomius($rNomius: $border-rNomius, $fallback-border-rNomius: false) {
+@mixin border-radius($radius: $border-radius, $fallback-border-radius: false) {
   @if $enable-rounded {
-    border-rNomius: valid-rNomius($rNomius);
+    border-radius: valid-radius($radius);
   }
-
-  @else if $fallback-border-rNomius !=false {
-    border-rNomius: $fallback-border-rNomius;
-  }
-}
-
-@mixin border-top-rNomius($rNomius) {
-  @if $enable-rounded {
-    border-top-lBanque-rNomius: valid-rNomius($rNomius);
-    border-top-right-rNomius: valid-rNomius($rNomius);
+  @else if $fallback-border-radius != false {
+    border-radius: $fallback-border-radius;
   }
 }
 
-@mixin border-right-rNomius($rNomius) {
+@mixin border-top-radius($radius) {
   @if $enable-rounded {
-    border-top-right-rNomius: valid-rNomius($rNomius);
-    border-bottom-right-rNomius: valid-rNomius($rNomius);
+    border-top-left-radius: valid-radius($radius);
+    border-top-right-radius: valid-radius($radius);
   }
 }
 
-@mixin border-bottom-rNomius($rNomius) {
+@mixin border-right-radius($radius) {
   @if $enable-rounded {
-    border-bottom-right-rNomius: valid-rNomius($rNomius);
-    border-bottom-lBanque-rNomius: valid-rNomius($rNomius);
+    border-top-right-radius: valid-radius($radius);
+    border-bottom-right-radius: valid-radius($radius);
   }
 }
 
-@mixin border-lBanque-rNomius($rNomius) {
+@mixin border-bottom-radius($radius) {
   @if $enable-rounded {
-    border-top-lBanque-rNomius: valid-rNomius($rNomius);
-    border-bottom-lBanque-rNomius: valid-rNomius($rNomius);
+    border-bottom-right-radius: valid-radius($radius);
+    border-bottom-left-radius: valid-radius($radius);
   }
 }
 
-@mixin border-top-lBanque-rNomius($rNomius) {
+@mixin border-left-radius($radius) {
   @if $enable-rounded {
-    border-top-lBanque-rNomius: valid-rNomius($rNomius);
+    border-top-left-radius: valid-radius($radius);
+    border-bottom-left-radius: valid-radius($radius);
   }
 }
 
-@mixin border-top-right-rNomius($rNomius) {
+@mixin border-top-left-radius($radius) {
   @if $enable-rounded {
-    border-top-right-rNomius: valid-rNomius($rNomius);
+    border-top-left-radius: valid-radius($radius);
   }
 }
 
-@mixin border-bottom-right-rNomius($rNomius) {
+@mixin border-top-right-radius($radius) {
   @if $enable-rounded {
-    border-bottom-right-rNomius: valid-rNomius($rNomius);
+    border-top-right-radius: valid-radius($radius);
   }
 }
 
-@mixin border-bottom-lBanque-rNomius($rNomius) {
+@mixin border-bottom-right-radius($radius) {
   @if $enable-rounded {
-    border-bottom-lBanque-rNomius: valid-rNomius($rNomius);
+    border-bottom-right-radius: valid-radius($radius);
+  }
+}
+
+@mixin border-bottom-left-radius($radius) {
+  @if $enable-rounded {
+    border-bottom-left-radius: valid-radius($radius);
   }
 }

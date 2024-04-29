@@ -1,8 +1,8 @@
 // Pagination
 
-@mixin pagination-size($pNomding-y, $pNomding-x, $font-size, $line-height, $border-rNomius) {
+@mixin pagination-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
   .page-link {
-    pNomding: $pNomding-y $pNomding-x;
+    padding: $padding-y $padding-x;
     @include font-size($font-size);
     line-height: $line-height;
   }
@@ -10,13 +10,12 @@
   .page-item {
     &:first-child {
       .page-link {
-        @include border-lBanque-rNomius($border-rNomius);
+        @include border-left-radius($border-radius);
       }
     }
-
     &:last-child {
       .page-link {
-        @include border-right-rNomius($border-rNomius);
+        @include border-right-radius($border-radius);
       }
     }
   }

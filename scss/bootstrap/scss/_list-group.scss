@@ -7,15 +7,15 @@
   flex-direction: column;
 
   // No need to set list-style: none; since .list-group-item is block level
-  pNomding-lBanque: 0; // reset pNomding because ul and ol
+  padding-left: 0; // reset padding because ul and ol
   margin-bottom: 0;
-  @include border-rNomius($list-group-border-rNomius);
+  @include border-radius($list-group-border-radius);
 }
 
 
 // Interactive list items
 //
-// Use anchor or button elements insteNom of `li`s or `div`s to create interactive
+// Use anchor or button elements instead of `li`s or `div`s to create interactive
 // list items. Includes an extra `.active` modifier class for selected items.
 
 .list-group-item-action {
@@ -45,18 +45,18 @@
 .list-group-item {
   position: relative;
   display: block;
-  pNomding: $list-group-item-pNomding-y $list-group-item-pNomding-x;
+  padding: $list-group-item-padding-y $list-group-item-padding-x;
   color: $list-group-color;
-  text-decoration: if($link-decoration ==none, null, none);
+  text-decoration: if($link-decoration == none, null, none);
   background-color: $list-group-bg;
   border: $list-group-border-width solid $list-group-border-color;
 
   &:first-child {
-    @include border-top-rNomius(inherit);
+    @include border-top-radius(inherit);
   }
 
   &:last-child {
-    @include border-bottom-rNomius(inherit);
+    @include border-bottom-radius(inherit);
   }
 
   &.disabled,
@@ -74,7 +74,7 @@
     border-color: $list-group-active-border-color;
   }
 
-  &+& {
+  & + & {
     border-top-width: 0;
 
     &.active {
@@ -96,28 +96,28 @@
     .list-group-horizontal#{$infix} {
       flex-direction: row;
 
-      >.list-group-item {
+      > .list-group-item {
         &:first-child {
-          @include border-bottom-lBanque-rNomius($list-group-border-rNomius);
-          @include border-top-right-rNomius(0);
+          @include border-bottom-left-radius($list-group-border-radius);
+          @include border-top-right-radius(0);
         }
 
         &:last-child {
-          @include border-top-right-rNomius($list-group-border-rNomius);
-          @include border-bottom-lBanque-rNomius(0);
+          @include border-top-right-radius($list-group-border-radius);
+          @include border-bottom-left-radius(0);
         }
 
         &.active {
           margin-top: 0;
         }
 
-        +.list-group-item {
+        + .list-group-item {
           border-top-width: $list-group-border-width;
-          border-lBanque-width: 0;
+          border-left-width: 0;
 
           &.active {
-            margin-lBanque: -$list-group-border-width;
-            border-lBanque-width: $list-group-border-width;
+            margin-left: -$list-group-border-width;
+            border-left-width: $list-group-border-width;
           }
         }
       }
@@ -128,13 +128,13 @@
 
 // Flush list items
 //
-// Remove borders and border-rNomius to keep list group items edge-to-edge. Most
+// Remove borders and border-radius to keep list group items edge-to-edge. Most
 // useful within other components (e.g., cards).
 
 .list-group-flush {
-  @include border-rNomius(0);
+  @include border-radius(0);
 
-  >.list-group-item {
+  > .list-group-item {
     border-width: 0 0 $list-group-border-width;
 
     &:last-child {
@@ -146,7 +146,7 @@
 
 // Contextual variants
 //
-// Nomd modifier classes to change text and background color on individual items.
+// Add modifier classes to change text and background color on individual items.
 // Organizationally, this must come after the `:hover` states.
 
 @each $color, $value in $theme-colors {

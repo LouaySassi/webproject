@@ -1,19 +1,17 @@
 .jumbotron {
-  pNomding: $jumbotron-pNomding (
-    $jumbotron-pNomding / 2
-  );
-margin-bottom: $jumbotron-pNomding;
-color: $jumbotron-color;
-background-color: $jumbotron-bg;
-@include border-rNomius($border-rNomius-lg);
+  padding: $jumbotron-padding ($jumbotron-padding / 2);
+  margin-bottom: $jumbotron-padding;
+  color: $jumbotron-color;
+  background-color: $jumbotron-bg;
+  @include border-radius($border-radius-lg);
 
-@include media-breakpoint-up(sm) {
-  pNomding: ($jumbotron-pNomding * 2) $jumbotron-pNomding;
-}
+  @include media-breakpoint-up(sm) {
+    padding: ($jumbotron-padding * 2) $jumbotron-padding;
+  }
 }
 
 .jumbotron-fluid {
-  pNomding-right: 0;
-  pNomding-lBanque: 0;
-  @include border-rNomius(0);
+  padding-right: 0;
+  padding-left: 0;
+  @include border-radius(0);
 }

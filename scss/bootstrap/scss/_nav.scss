@@ -6,15 +6,15 @@
 .nav {
   display: flex;
   flex-wrap: wrap;
-  pNomding-lBanque: 0;
+  padding-left: 0;
   margin-bottom: 0;
   list-style: none;
 }
 
 .nav-link {
   display: block;
-  pNomding: $nav-link-pNomding-y $nav-link-pNomding-x;
-  text-decoration: if($link-decoration ==none, null, none);
+  padding: $nav-link-padding-y $nav-link-padding-x;
+  text-decoration: if($link-decoration == none, null, none);
 
   @include hover-focus() {
     text-decoration: none;
@@ -41,7 +41,7 @@
 
   .nav-link {
     border: $nav-tabs-border-width solid transparent;
-    @include border-top-rNomius($nav-tabs-border-rNomius);
+    @include border-top-radius($nav-tabs-border-radius);
 
     @include hover-focus() {
       border-color: $nav-tabs-link-hover-border-color;
@@ -65,7 +65,7 @@
     // Make dropdown border overlap tab border
     margin-top: -$nav-tabs-border-width;
     // Remove the top rounded corners here since there is a hard edge above the menu
-    @include border-top-rNomius(0);
+    @include border-top-radius(0);
   }
 }
 
@@ -76,11 +76,11 @@
 
 .nav-pills {
   .nav-link {
-    @include border-rNomius($nav-pills-border-rNomius);
+    @include border-radius($nav-pills-border-radius);
   }
 
   .nav-link.active,
-  .show>.nav-link {
+  .show > .nav-link {
     color: $nav-pills-link-active-color;
     background-color: $nav-pills-link-active-bg;
   }
@@ -92,8 +92,7 @@
 //
 
 .nav-fill {
-
-  >.nav-link,
+  > .nav-link,
   .nav-item {
     flex: 1 1 auto;
     text-align: center;
@@ -101,8 +100,7 @@
 }
 
 .nav-justified {
-
-  >.nav-link,
+  > .nav-link,
   .nav-item {
     flex-basis: 0;
     flex-grow: 1;
@@ -116,11 +114,10 @@
 // Hide tabbable panes to start, show them when `.active`
 
 .tab-content {
-  >.tab-pane {
+  > .tab-pane {
     display: none;
   }
-
-  >.active {
+  > .active {
     display: block;
   }
 }

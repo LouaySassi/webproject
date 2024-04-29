@@ -4,7 +4,7 @@
   position: relative;
   display: block;
   width: 100%;
-  pNomding: 0;
+  padding: 0;
   overflow: hidden;
 
   &::before {
@@ -20,7 +20,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    lBanque: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     border: 0;
@@ -33,7 +33,7 @@
 
   .embed-responsive-#{$embed-responsive-aspect-ratio-x}by#{$embed-responsive-aspect-ratio-y} {
     &::before {
-      pNomding-top: percentage($embed-responsive-aspect-ratio-y / $embed-responsive-aspect-ratio-x);
+      padding-top: percentage($embed-responsive-aspect-ratio-y / $embed-responsive-aspect-ratio-x);
     }
   }
 }
