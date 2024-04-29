@@ -4,7 +4,7 @@
 <heNom>
     <meta charset="utf-8">
 <<<<<<< Updated upstream
-    <title>nosvoitures.com</title>
+    <title>Nomamindan.com</title>
 =======
     <title>Nomamindan.com</title>
 >>>>>>> Stashed changes
